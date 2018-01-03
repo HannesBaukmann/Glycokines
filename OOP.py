@@ -16,25 +16,35 @@ class Cell:
 #        pass
 
 class Glycan: # Einteilung in Man- und Fuc-type?
-    pass
+    def __init__(self, name_string, type_string, lectins_list_strings, amount_int): # Man-type vs. Fuc-type
+        self.name = name_string
+        self.type = type_string
+        self.receptors = lectins_list_strings
+        self.density = amount_int
+    def getSpecificity(self):
+        print(self.receptors)
 
 class Lectin: # erstmal nur DC-SIGN
-    pass
+    def __init__(self, name_string):
+        self.name = name_string
+    def setSpecificity(self, glycans_list_strings):
+        self.ligands = glycans_list_strings
 
 class EncoderCell(Cell): # can use all methods of class Cell
     def __init__(self):
         super().__init__()
         self.glycans=[]
         self.glycan_density=0
-    def expressGlycans(self, glycan_string, glycan_density_int, glycan_receptor_list):
-        self.glycans.append(Glycan(glycan_string, glycan_density_int, glycan_receptor_list))
-        self.glycan_density += glycan_density_int
+    def expressGlycans(self, glycan_string, glycan_type_string, glycan_receptor_list, glycan_amount_int):
+        self.glycans.append(Glycan(glycan_string, glycan_type_string, glycan_receptor_list, glycan_amount_int))
+        self.glycan_density += glycan_amount_int
         if self.glycan_density > 1:
             print("ERROR!")
     def getAllGlycans(self):
-        pass
+        print(self.glycans)
+        print()
     def showDensity(self):
-        pass # Density aller Glycane
+        print(self.glycan_density)
 
 class DecoderCell(Cell):
     pass
