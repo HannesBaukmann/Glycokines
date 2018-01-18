@@ -1,0 +1,64 @@
+\hypertarget{namespaceawesome3_d}{}\section{awesome3D Namespace Reference}
+\label{namespaceawesome3_d}\index{awesome3D@{awesome3D}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceawesome3_d_a8dbde731a58e2a410a00a8b710f675dd}{Gen\+\_\+\+Rand\+Line}} (length, dims=2)
+\item 
+\mbox{\Hypertarget{namespaceawesome3_d_a3880bce8144e84df6f930e519f8aaf4b}\label{namespaceawesome3_d_a3880bce8144e84df6f930e519f8aaf4b}} 
+def {\bfseries update\+\_\+lines} (num, data\+Lines, lines)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceawesome3_d_a1d67360c21020aa16682a83c2728f039}\label{namespaceawesome3_d_a1d67360c21020aa16682a83c2728f039}} 
+{\bfseries fig} = plt.\+figure()
+\item 
+\mbox{\Hypertarget{namespaceawesome3_d_a1924ab2ef7c8b99f6dbaa5abe2fb6f7b}\label{namespaceawesome3_d_a1924ab2ef7c8b99f6dbaa5abe2fb6f7b}} 
+{\bfseries ax} = p3.\+Axes3D(fig)
+\item 
+\mbox{\Hypertarget{namespaceawesome3_d_a4b315f767d2e877640adbe6f9b4e2a67}\label{namespaceawesome3_d_a4b315f767d2e877640adbe6f9b4e2a67}} 
+list {\bfseries data} = \mbox{[}\mbox{\hyperlink{namespaceawesome3_d_a8dbde731a58e2a410a00a8b710f675dd}{Gen\+\_\+\+Rand\+Line}}(25, 3) for index in range(50)\mbox{]}
+\item 
+\mbox{\Hypertarget{namespaceawesome3_d_a6eb83efe0d9acac5432efdb18bba939d}\label{namespaceawesome3_d_a6eb83efe0d9acac5432efdb18bba939d}} 
+list {\bfseries lines} = \mbox{[}ax.\+plot(dat\mbox{[}0, 0\+:1\mbox{]}, dat\mbox{[}1, 0\+:1\mbox{]}, dat\mbox{[}2, 0\+:1\mbox{]})\mbox{[}0\mbox{]} for dat in data\mbox{]}
+\item 
+{\bfseries line\+\_\+ani}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}============
+3D animation
+============
+
+A simple example of an animated plot... In 3D!
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceawesome3_d_a8dbde731a58e2a410a00a8b710f675dd}\label{namespaceawesome3_d_a8dbde731a58e2a410a00a8b710f675dd}} 
+\index{awesome3D@{awesome3D}!Gen\+\_\+\+Rand\+Line@{Gen\+\_\+\+Rand\+Line}}
+\index{Gen\+\_\+\+Rand\+Line@{Gen\+\_\+\+Rand\+Line}!awesome3D@{awesome3D}}
+\subsubsection{\texorpdfstring{Gen\+\_\+\+Rand\+Line()}{Gen\_RandLine()}}
+{\footnotesize\ttfamily def awesome3\+D.\+Gen\+\_\+\+Rand\+Line (\begin{DoxyParamCaption}\item[{}]{length,  }\item[{}]{dims = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a line using a random walk algorithm
+
+length is the number of points for the line.
+dims is the number of dimensions the line has.
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceawesome3_d_af81b21dee31a4d9e3517281959dc0f13}\label{namespaceawesome3_d_af81b21dee31a4d9e3517281959dc0f13}} 
+\index{awesome3D@{awesome3D}!line\+\_\+ani@{line\+\_\+ani}}
+\index{line\+\_\+ani@{line\+\_\+ani}!awesome3D@{awesome3D}}
+\subsubsection{\texorpdfstring{line\+\_\+ani}{line\_ani}}
+{\footnotesize\ttfamily awesome3\+D.\+line\+\_\+ani}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  animation.FuncAnimation(fig, update\_lines, 25, fargs=(data, lines),
+2                                    interval=50, blit=\textcolor{keyword}{False})
+\end{DoxyCode}

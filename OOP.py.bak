@@ -1,25 +1,10 @@
-## \brief Brief description.
-#         Brief description continues.
-#
-# Detailed description starts here.
-# @package HannesOOPProject
-# Dokumentation for this module using doxygen
-#
-# Markdown is supported. Would be nice to add some at the end of the project.
-
 import random
 
-## Dokumentation for class Cell
-#
-#
-
 class Cell:
-    ## The constructor.
     def __init__(self):
         pass # welche Parameter braucht jede Zelle? Größe? Größe könnte dann Schrittlänge bestimmen!
-
     def randomWalk2D(self, n):
-        x, y = 0, 0  ##< x coordinate
+        x, y = 0, 0
         for i in range(n):
             (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
             x += dx
@@ -38,8 +23,6 @@ class Glycan: # Einteilung in Man- und Fuc-type?
         self.density = amount_int
     def getSpecificity(self):
         print(self.receptors)
-
-# für jeden Typ Glykan eine Klasse der Klasse Glycan!
 
 class Lectin: # erstmal nur DC-SIGN
     def __init__(self, name_string):
@@ -79,18 +62,10 @@ class DecoderCell(Cell):
 
 #if __name__ == ''__main__'' : # wofür is dat eijentlich?
 
-# Creational Pattern: PROTOTYPE
+### Creational Pattern: PROTOTYPE
 # Encoder zu Decoder ca. 50:1
 
 #if __name__ == "__main__":   # wofür is dat eijentlich?
 
 test=EncoderCell()
 print(test.randomWalk2D(25))
-
-# um ein bestimmtes Verhältnis (z. B. von Glykanen) herzustellen:
-# self.fraction initialisieren
-# def buildNode(self, ID):
-#   if random.random() < self.fraction:
-#       self.graph.addNode(Node(ID))
-#   else:
-#       self.graph.addNode(EnergyTrap(ID))
