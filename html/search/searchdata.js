@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "_acdeghloprt",
   1: "cdeglopt",
   2: "ah",
-  3: "_g",
+  3: "_gr",
   4: "r"
 };
 
