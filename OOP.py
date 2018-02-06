@@ -1,3 +1,7 @@
+# git add -A .
+# git commit -m ""
+# git push -u origin master
+#
 ## \brief Brief description.
 #         Brief description continues.
 #
@@ -16,10 +20,10 @@ import random
 class Cell:
     ## The constructor.
     def __init__(self, ID_string):
-        self.ID=ID_string
+        self.id=ID_string
     ## Very simple 2D Random walk.
     def randomWalk2D(self, n):
-        x, y = 0, 0
+        x, y = 0, 0 # should better start at random points
         for i in range(n):
             (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
             x += dx
@@ -98,12 +102,6 @@ class Simulation: ## enhält Dictionary für Bindungsspezifität und Cytokinexpr
                 for product in self.cytokine_dict[glycan][lectin]:
                     self.cytokines.append(Cytokine(product, x, y))
 
-
-# Creational Pattern: PROTOTYPE
-
-test=EncoderCell()
-print(test.randomWalk2D(25))
-
 # um ein bestimmtes Verhältnis (z. B. von Glykanen) herzustellen:
 # self.fraction initialisieren
 # def buildNode(self, ID):
@@ -114,40 +112,42 @@ print(test.randomWalk2D(25))
 
 # optionale Parameter: init...(bla, optional=10) optionale Parameter brauchen default-Wert!
 
-if __name__ == "__main__":
-    graph = TrapBarrierGraph()
-    graph.addNode(Node(1))
-    graph.addNode(Node(2))
-    barrier = EnergyBarrier( 1, 2, 1)
-    graph.addBarrier( barrier )
-    print( graph.adjacency[1][2].height )
-
-    model = Well( 10, 5 ) # Anzahl von Knoten und Mauern
-    builder = Builder( .1,)  # meanHeight, meanDepth, fraction
-    graph = model.createGraph( builder ) # createGraph aus TrapBarrierModel benutzt Methoden aus GraphBuilder
-    print( graph.adjacency )
-
-    walker = Walker( 0, graph )
-    print( walker.position )
-    for i in range( 20 ):
-        walker.changeNode()
-        print( walker.position )
-
 class Builder: ## = GraphBuilder
-    def __init__( self, fraction ):
-        self.fraction = fraction # Hier fraction encoder / decoder?
-    def createModel( self ):
-        self.model = Well()
-    def createCell( self, ID ):
-        if random.random() < self.fraction:
-            self.model.addCell( DecoderCell )
-        else:
-            self.model.addCell( EncoderCell )
+    def __init__( self,  ): # dimension des Wells?
+        pass
+    def buildCytoModel( self ):
+        self.well = Well()
+    def buildEncoderCell( self, id ):
+        pass
+    def buildDecoderCell( self, id ):
+        pass
 
-class Well: ## = TrapBarrierGraph
-    def __init__(self):
+class Well:
+    def __init__( self ):
+        self.encoderCells = {}
+        self.decoderCells = {}
+    def addEncoderCell( self, encoderCell ):
+        self.encoderCells.update( {encoderCell.id:encoderCell} )
+    def addDecoderCell( self, decoderCell ):
+        self.decoderCells.update( {decoderCell.id:decoderCell} )
 
-class TrapBarrierModel: ## = Simulation
+class CytokineModel:
+    def __init__( self, numberOfEncoderCells, numberOfDecoderCells ):
+        self.n_encoder = numberOfEncoderCells
+        self.n_decoder = numberOfDecoderCells
+    def createGraph( self, builder ):
+        builder.buildCytoModel()
+
+        for i in range( self.n_encoder ):
+            builder.buildEncoderCell(i)
+            builder.well.encoderCells.update( {i:{}} )
+
+        for i in range( self.n_decoder ):
+            builder.buildDecoderCell(i)
+            builder.well.decoderCells.update( {i:{}} )
+        return builder.well
+
+class TrapBarrierModel: ## = CytokineModel
     def __init__( self, numberOfNodes, numberOfBarriers ):
         if numberOfBarriers > ( numberOfNodes * ( numberOfNodes - 1 ) / 2 ):
             raise ValueError(" Too many Barriers! ")
@@ -167,7 +167,5 @@ class TrapBarrierModel: ## = Simulation
                 j -= 1
 
         return builder.graph
-
-## checken, welche meiner Klassen Simons Klassen entsprechen und dann nochmal alles durchgehen.
 
 ## Klassendiagramm machen

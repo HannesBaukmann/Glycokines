@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c739da01-1cfb-4318-9f11-4eb0ece290a0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/OOP.py" afterPath="$PROJECT_DIR$/OOP.py" />
-      <change beforePath="$PROJECT_DIR$/doxtest.py" afterPath="$PROJECT_DIR$/doxtest.py" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_cell-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p_1_1_cell-members.html" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_cell.html" afterPath="$PROJECT_DIR$/html/class_o_o_p_1_1_cell.html" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_decoder_cell-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p_1_1_decoder_cell-members.html" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_decoder_cell.html" afterPath="$PROJECT_DIR$/html/class_o_o_p_1_1_decoder_cell.html" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_encoder_cell-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p_1_1_encoder_cell-members.html" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_encoder_cell.html" afterPath="$PROJECT_DIR$/html/class_o_o_p_1_1_encoder_cell.html" />
-      <change beforePath="$PROJECT_DIR$/html/functions.html" afterPath="$PROJECT_DIR$/html/functions.html" />
-      <change beforePath="$PROJECT_DIR$/html/functions_func.html" afterPath="$PROJECT_DIR$/html/functions_func.html" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_a.js" afterPath="$PROJECT_DIR$/html/search/all_a.js" />
-      <change beforePath="$PROJECT_DIR$/html/search/searchdata.js" afterPath="$PROJECT_DIR$/html/search/searchdata.js" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_cell.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p_1_1_cell.pdf" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_cell.tex" afterPath="$PROJECT_DIR$/latex/class_o_o_p_1_1_cell.tex" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_decoder_cell.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p_1_1_decoder_cell.pdf" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_encoder_cell.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p_1_1_encoder_cell.pdf" />
-      <change beforePath="$PROJECT_DIR$/latex/classprototype_1_1_prototype.pdf" afterPath="$PROJECT_DIR$/latex/classprototype_1_1_prototype.pdf" />
-      <change beforePath="$PROJECT_DIR$/latex/classprototype_1_1_type1.pdf" afterPath="$PROJECT_DIR$/latex/classprototype_1_1_type1.pdf" />
-      <change beforePath="$PROJECT_DIR$/latex/classprototype_1_1_type2.pdf" afterPath="$PROJECT_DIR$/latex/classprototype_1_1_type2.pdf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +28,8 @@
       <file leaf-file-name="OOP.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="172" column="25" lean-forward="false" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
+            <state relative-caret-position="30">
+              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -686,8 +667,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="172" column="25" lean-forward="false" selection-start-line="172" selection-start-column="25" selection-end-line="172" selection-end-column="25" />
+        <state relative-caret-position="30">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
           <folding />
         </state>
       </provider>
