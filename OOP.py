@@ -17,71 +17,32 @@ import random
 #
 # \param x,y spatial coordinates
 
-class Cell:
-    ## The constructor.
+class Sphere:
     def __init__(self, ID_string):
         self.id=ID_string
-    ## Very simple 2D Random walk.
-    def randomWalk2D(self, n):
-        x, y = 0, 0 # should better start at random points
-        for i in range(n):
-            (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
-            x += dx
-            y += dy
-        return (x, y)
-    def randomWalk3D(self): # Geschwindigkeit? Schrittlänge? Dauer?
-        pass
-    def binding(self):
-        pass
 
-class EncoderCell(Cell): # can use all methods of class Cell
+class Bead(Sphere):
     def __init__(self):
         super().__init__()
         self.glycans=[]
-        self.glycan_density=0
-    def expressGlycans(self, glycan_string, glycan_type_string, glycan_receptor_list, glycan_amount_int):
-        self.glycans.append(Glycan(glycan_string, glycan_type_string, glycan_receptor_list, glycan_amount_int))
-        self.glycan_density += glycan_amount_int
-        if self.glycan_density > 1:
-            print("ERROR!")
-    def getAllGlycans(self):
-        print(self.glycans)
-        print()
-    def showDensity(self):
-        print(self.glycan_density)
+        self.glycans_ratio=0
+    def attachGlycans(self, glycan_string, glycan_type_string):
+        if glycan_string in self.glycans:
+            print("ERROR") # Duplikate sind nicht zugelassen!
+            return # funktioniert das so, wie ich denke??
+        self.glycans.append(Glycan(glycan_string, glycan_type_string))
+        self.glycans_ratio = 100/len(self.glycans)
 
-class Glycan: # Einteilung in Man- und Fuc-type?
-    def __init__(self, name_string, type_string, amount_int, cytokine_string): # Man-type vs. Fuc-type? # initialisieren mit Cytokinen?
+class Glycan:
+    def __init__(self, name_string, type_string): # Man-type vs. Fuc-type...
         self.name = name_string
         self.type = type_string
-        self.density = amount_int
-        self.cytokine_evoked = cytokine_string
-    def getSpecificity(self):
-        print(self.receptors)
 
-# für jeden Typ Glykan eine Klasse der Klasse Glycan!
-
-class DecoderCell(Cell):
-    def __init__(self, cytokine):
-    def binding(self, encoderCell):
-        pass
-    # Bindung, wenn Zellen genau in der selben Position sind? Erhöht WK des Re-bindings -- oder Abstoßung?
-    # Bindung hängt von density der Glycane und Lectine ab -> WKVerteilung
-    # gleichzeitige Bindung mehrerer Encoder and Decoder?
-    def getAllLectins(self):
-        pass
-    def showDensity(self):
-        pass
+# DecoderCell und Lectin erstellen, wenn Bead und Glycan abgeschlossen sind.
 
 class Cytokine:
     def __init__(self, name, x, y): # coordinaten
         self.cytokine_name=name
-
-class Lectin: # erstmal nur DC-SIGN
-    def __init__(self, name_string):
-        self.name = name_string
-    def setSpecificity(self, glycans_list_strings):
-        self.ligands = glycans_list_strings
 
 class Simulation: ## enhält Dictionary für Bindungsspezifität und Cytokinexpression
     def __init__(self, numberOfDecoders, numberOfEncoders):
@@ -96,11 +57,24 @@ class Simulation: ## enhält Dictionary für Bindungsspezifität und Cytokinexpr
     def simulate(self):
         randomWalk
         detectBinding
+        # Bindung, wenn Zellen genau in der selben Position sind? Erhöht WK des Re-bindings -- oder Abstoßung?
+        # Bindung hängt von density der Glycane und Lectine ab -> WKVerteilung
+        # gleichzeitige Bindung mehrerer Encoder and Decoder?
     def detectBinding(self): # cytokines are produced and saved in container
         for glycan in glycan_list:
             for lectin in lectin_list:
                 for product in self.cytokine_dict[glycan][lectin]:
                     self.cytokines.append(Cytokine(product, x, y))
+    ## Very simple 2D Random walk.
+    def randomWalk2D(self, n):
+        x, y = 0, 0 # should better start at random points
+        for i in range(n):
+            (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
+            x += dx
+            y += dy
+        return (x, y)
+    def randomWalk3D(self): # Geschwindigkeit? Schrittlänge? Dauer?
+        pass
 
 # um ein bestimmtes Verhältnis (z. B. von Glykanen) herzustellen:
 # self.fraction initialisieren
@@ -167,5 +141,3 @@ class TrapBarrierModel: ## = CytokineModel
                 j -= 1
 
         return builder.graph
-
-## Klassendiagramm machen
