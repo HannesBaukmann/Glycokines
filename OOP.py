@@ -41,22 +41,52 @@ class Glycan:
 # DecoderCell und Lectin erstellen, wenn Bead und Glycan abgeschlossen sind.
 
 class Cytokine:
-    def __init__(self, name, x, y): # coordinaten
+    def __init__(self, name, x, y):
         self.cytokine_name=name
+        self.coordinates=[x,y]
 
-class Simulation: ## enhält Dictionary für Bindungsspezifität und Cytokinexpression
+class Well:
+    def __init__( self, x, y ):
+        self.length=x
+        self.height=y
+        self.beads = {}
+        self.decoderCells = {}
+    def addBead( self, bead ):
+        self.beads.update( {bead.id:bead} )
+    def addDecoderCell( self, decoderCell ):
+        self.decoderCells.update( {decoderCell.id:decoderCell} )
+
+class Builder:
+    def __init__(self):
+        pass
+    def buildModel( self, x, y ): #Fehlermeldung, wenn Well kleiner als Anzahl Objekte?
+        self.well = Well(x, y)
+    def buildBead( self, id ):
+        self.well.addBead(id)
+    def buildDecoderCell( self, id ):
+        self.well.addDecoderCell(id)
+
+class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität und Cytokinexpression
     def __init__(self, numberOfDecoders, numberOfEncoders):
-        self.n = numberOfEncoders
-        self.m = numberOfDecoders
+        self.n_beads = numberOfEncoders
+        self.n_decoder = numberOfDecoders
+        self.cytokines=[]
+        self.cytokine_dict={"Man":{"DC-SIGN": ("IL-6",), "Dectin-1": ("IL-6",)},
+                            "Fuc":("DC-SIGN", "IL-27p28")}
     def createModel(self, builder):
         builder.buildModel()
-    def __init__(self):
-        self.cytokine_dict={"glycan1":{"DC-SIGN": ("IL6",), "Langerin": ("IL10",)},
-                            "glycan2":("", "")}
-        self.cytokines=[]
+
+        for i in range( self.n_beads ):
+            builder.buildEncoderCell(i)
+            builder.well.encoderCells.update( {i:{}} )
+
+        for i in range( self.n_decoder ):
+            builder.buildDecoderCell(i)
+            builder.well.decoderCells.update( {i:{}} )
+        return builder.well
     def simulate(self):
         randomWalk
-        detectBinding
+        detectBinding # if type == type!
         # Bindung, wenn Zellen genau in der selben Position sind? Erhöht WK des Re-bindings -- oder Abstoßung?
         # Bindung hängt von density der Glycane und Lectine ab -> WKVerteilung
         # gleichzeitige Bindung mehrerer Encoder and Decoder?
@@ -75,69 +105,3 @@ class Simulation: ## enhält Dictionary für Bindungsspezifität und Cytokinexpr
         return (x, y)
     def randomWalk3D(self): # Geschwindigkeit? Schrittlänge? Dauer?
         pass
-
-# um ein bestimmtes Verhältnis (z. B. von Glykanen) herzustellen:
-# self.fraction initialisieren
-# def buildNode(self, ID):
-#   if random.random() < self.fraction:
-#       self.graph.addNode(Node(ID))
-#   else:
-#       self.graph.addNode(EnergyTrap(ID))
-
-# optionale Parameter: init...(bla, optional=10) optionale Parameter brauchen default-Wert!
-
-class Builder: ## = GraphBuilder
-    def __init__( self,  ): # dimension des Wells?
-        pass
-    def buildCytoModel( self ):
-        self.well = Well()
-    def buildEncoderCell( self, id ):
-        pass
-    def buildDecoderCell( self, id ):
-        pass
-
-class Well:
-    def __init__( self ):
-        self.encoderCells = {}
-        self.decoderCells = {}
-    def addEncoderCell( self, encoderCell ):
-        self.encoderCells.update( {encoderCell.id:encoderCell} )
-    def addDecoderCell( self, decoderCell ):
-        self.decoderCells.update( {decoderCell.id:decoderCell} )
-
-class CytokineModel:
-    def __init__( self, numberOfEncoderCells, numberOfDecoderCells ):
-        self.n_encoder = numberOfEncoderCells
-        self.n_decoder = numberOfDecoderCells
-    def createGraph( self, builder ):
-        builder.buildCytoModel()
-
-        for i in range( self.n_encoder ):
-            builder.buildEncoderCell(i)
-            builder.well.encoderCells.update( {i:{}} )
-
-        for i in range( self.n_decoder ):
-            builder.buildDecoderCell(i)
-            builder.well.decoderCells.update( {i:{}} )
-        return builder.well
-
-class TrapBarrierModel: ## = CytokineModel
-    def __init__( self, numberOfNodes, numberOfBarriers ):
-        if numberOfBarriers > ( numberOfNodes * ( numberOfNodes - 1 ) / 2 ):
-            raise ValueError(" Too many Barriers! ")
-        self.n = numberOfNodes
-        self.m = numberOfBarriers
-    def createGraph( self, builder ):
-        builder.buildGraph()
-
-        for i in range( self.n ):
-            builder.buildNode(i)
-            builder.graph.adjacency.update( {i:{}} )
-        j = self.m
-        while j > 0:
-            nodes = random.sample( range( self.n ), 2 )
-            if nodes[1] not in builder.graph.adjacency[ nodes[0] ]:
-                builder.buildBarrier( nodes[0], nodes[1] )
-                j -= 1
-
-        return builder.graph
