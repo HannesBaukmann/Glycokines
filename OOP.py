@@ -51,16 +51,21 @@ class Well:
         self.height=y
         self.beads = {}
         self.decoderCells = {}
-    def addBead( self, bead ):
+    def addBead( self, bead):
         self.beads.update( {bead.id:bead} )
-    def addDecoderCell( self, decoderCell ):
+        bead.x = random.randint(0, self.length) # Beads obtain starting position upon placement into Well
+        bead.y = random.randint(0, self.height)
+    def addDecoderCell( self, decoderCell):
         self.decoderCells.update( {decoderCell.id:decoderCell} )
+        decoderCell.x = random.randint(0, self.length)
+        decoderCell.y = random.randint(0, self.height)
 
 class Builder:
-    def __init__(self):
-        pass
-    def buildModel( self, x, y ): #Fehlermeldung, wenn Well kleiner als Anzahl Objekte?
-        self.well = Well(x, y)
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def buildModel( self): #Fehlermeldung, wenn Well kleiner als Anzahl Objekte?
+        self.well = Well(self.x, self.y)
     def buildBead( self, id ):
         self.well.addBead(id)
     def buildDecoderCell( self, id ):
@@ -69,12 +74,12 @@ class Builder:
 class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität und Cytokinexpression
     def __init__(self, numberOfDecoders, numberOfEncoders):
         self.n_beads = numberOfEncoders
-        self.n_decoder = numberOfDecoders
+        self.n_decoder = numberOfDecoders # Fehlermeldung, wenn eines davon 0 ist?
         self.cytokines=[]
         self.cytokine_dict={"Man":{"DC-SIGN": ("IL-6",), "Dectin-1": ("IL-6",)},
                             "Fuc":("DC-SIGN", "IL-27p28")}
     def createModel(self, builder):
-        builder.buildModel()
+        builder.buildWell()
 
         for i in range( self.n_beads ):
             builder.buildEncoderCell(i)
@@ -84,24 +89,23 @@ class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität
             builder.buildDecoderCell(i)
             builder.well.decoderCells.update( {i:{}} )
         return builder.well
-    def simulate(self):
-        randomWalk
-        detectBinding # if type == type!
-        # Bindung, wenn Zellen genau in der selben Position sind? Erhöht WK des Re-bindings -- oder Abstoßung?
-        # Bindung hängt von density der Glycane und Lectine ab -> WKVerteilung
-        # gleichzeitige Bindung mehrerer Encoder and Decoder?
+    def simulate(self, well, n):
+        x, y = 0, 0 # should better start at random points!
+        for i in range(n):
+            (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
+            x += dx
+            y += dy
+        return (x, y)
     def detectBinding(self): # cytokines are produced and saved in container
         for glycan in glycan_list:
             for lectin in lectin_list:
                 for product in self.cytokine_dict[glycan][lectin]:
                     self.cytokines.append(Cytokine(product, x, y))
     ## Very simple 2D Random walk.
-    def randomWalk2D(self, n):
-        x, y = 0, 0 # should better start at random points
+    def randomWalk(self, n):
+        x, y = 0, 0 # should better start at random points!
         for i in range(n):
             (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
             x += dx
             y += dy
         return (x, y)
-    def randomWalk3D(self): # Geschwindigkeit? Schrittlänge? Dauer?
-        pass
