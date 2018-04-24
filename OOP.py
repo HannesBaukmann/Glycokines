@@ -89,23 +89,25 @@ class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität
             builder.buildDecoderCell(i)
             builder.well.decoderCells.update( {i:{}} )
         return builder.well
-    def simulate(self, well, n):
-        x, y = 0, 0 # should better start at random points!
+    def simulate(self, well, n): # Kontrolle, ob überhaupt passende Paare im Well sind?
         for i in range(n):
-            (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
-            x += dx
-            y += dy
-        return (x, y)
-    def detectBinding(self): # cytokines are produced and saved in container
-        for glycan in glycan_list:
-            for lectin in lectin_list:
-                for product in self.cytokine_dict[glycan][lectin]:
-                    self.cytokines.append(Cytokine(product, x, y))
-    ## Very simple 2D Random walk.
-    def randomWalk(self, n):
-        x, y = 0, 0 # should better start at random points!
-        for i in range(n):
-            (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)])
-            x += dx
-            y += dy
-        return (x, y)
+            for j in range(well.beads): # erst bewegen sich alle Beads
+                (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)]) # Grenzen festlegen...
+                well.beads(j).x += dx
+                well.beads(j).y += dy
+            for k in range(well.encoderCells): # dann bewegen sich alle Zellen
+                (dx, dy) = random.choice([(0,1),(0,-1),(1,0),(-1,0)]) # Grenzen festlegen...
+                well.encoderCells(k).x += dx
+                well.encoderCells(k).y += dy
+                for l in range(well.beads): # für jeden Bead wird geprüft, ob an der Stelle Zelle ist. Beads können nacheinander von verschiedenen Zellen gebunden werden
+                    if well.encoderCells(k).x == well.beads(l).x: # x==x?
+                        if well.encoderCells(k).y == well.beads(l).y: #y==y?
+                            if random.uniform(0, 1) <= len(well.beads(l).glycans) * len(well.encoderCells(k).lectins): #Wk der Interaktion
+                                for m in range(well.encoderCells(k).lectins): # iteration über alle Lectine
+                                    for n in range(well.beads(l).glycans): # Iteration über alle Glycane
+                                         if well.encoderCells(k).lectins(m).type == well.beads(l).glycans(n).type:
+                                             for product in self.cytokine_dict[well.beads(l).glycans(n).type][well.encoderCells(k).lectins(m).type]:
+                                                 self.cytokines.append(Cytokine(product, well.encoderCell(k).x, well.encoderCell(k).y))
+                                                print("Motherfukcing Bindung!")
+        return self.cytokines
+    
