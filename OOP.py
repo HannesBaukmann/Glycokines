@@ -21,8 +21,7 @@ import random
 class Sphere:
     def __init__(self, ID_string):
         self.ID = ID_string
-        self.x = None
-        self.y = None
+        self.coordinates = []
 
 
 class Bead(Sphere):
@@ -56,38 +55,36 @@ class Lectin:
 
 
 class Cytokine:
-    def __init__(self, name, x, y):
-        self.cytokine_name = name
-        self.coordinates = [x, y]
+    def __init__(self, name, coordinates_list):
+        self.name = name
+        self.coordinates = [coordinates_list]
 
 
 class Well:
-    def __init__(self, x, y):
-        self.length = x
-        self.height = y
-        self.beads = []  # warum dict?
+    def __init__(self, x, y, z):
+        self.size = [x, y, z]
+        self.beads = []
         self.decoderCells = []
 
     def addBead(self, bead, glyan_name_string, glycan_type_string, density_int):
         self.beads.append(bead)
-        bead.x = random.randint(0, self.length)  # Beads obtain starting position upon placement into Well
-        bead.y = random.randint(0, self.height)
+        bead.coordinates = [random.randint(0, self.size[0]), random.randint(0, self.size[1]), random.randint(0, self.size[2])]
         bead.attachGlycans(glyan_name_string, glycan_type_string, density_int)
 
     def addDecoderCell(self, decoderCell, lectin_name_string, lectin_type_string):
         self.decoderCells.append(decoderCell)
-        decoderCell.x = random.randint(0, self.length)
-        decoderCell.y = random.randint(0, self.height)
+        decoderCell.coordinates = [random.randint(0, self.size[0]), random.randint(0, self.size[1]), random.randint(0, self.size[2])]
         decoderCell.expressLectins(lectin_name_string, lectin_type_string)
 
 
 class Builder:
-    def __init__(self, x, y):
+    def __init__(self, x, y, z):
         self.x = x
         self.y = y
+        self.z = z
 
     def buildWell(self):  # Fehlermeldung, wenn Well kleiner als Anzahl Objekte?
-        self.well = Well(self.x, self.y)
+        self.well = Well(self.x, self.y, self.z)
 
     def buildBead(self, ID, glyan_name_string, glycan_type_string, density_int):
         self.well.addBead(Bead(ID), glyan_name_string, glycan_type_string, density_int)
@@ -119,31 +116,24 @@ class Simulation:  ## enthält (sehr simples) Dictionary für Bindungsspezifitä
     def simulate(self, well, n):  # Kontrolle, ob überhaupt passende Paare im Well sind?
         for i in range(n):
             for j in range(len(well.beads)):  # erst bewegen sich alle Beads
-                (dx, dy) = random.choice([(0, 1), (0, -1), (1, 0), (-1, 0)])  # Grenzen festlegen...
-                well.beads[j].x += dx
-                well.beads[j].y += dy
+                (dx, dy, dz) = random.choice([(0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, -1), (0, -1, 0), (-1, 0, 0)])  # Grenzen festlegen...
+                well.beads[j].coordinates = [sum(s) for s in zip(well.beads[j].coordinates, (dx, dy, dz))]
             for k in range(len(well.decoderCells)):  # dann bewegen sich alle Zellen
-                (dx, dy) = random.choice([(0, 1), (0, -1), (1, 0), (-1, 0)])  # Grenzen festlegen...
-                well.decoderCells[k].x += dx
-                well.decoderCells[k].y += dy
-                for l in range(len(
-                        well.beads)):  # für jeden Bead wird geprüft, ob an der Stelle Zelle ist. Beads können nacheinander von verschiedenen Zellen gebunden werden
-                    if well.decoderCells[k].x == well.beads[l].x:  # x==x?
-                        if well.decoderCells[k].y == well.beads[l].y:  # y==y?
-                            if random.uniform(0, 10000) <= well.beads[l].glycan_density * well.decoderCells[k].lectin_density:
-                                if well.decoderCells[k].lectin.name in self.cytokine_dict[well.beads[l].glycan.type]:
-#                                    print("Motherfukcing Bindung!")
-#                                    print(self.cytokine_dict[well.beads[l].glycan.type][well.decoderCells[k].lectin.name])
-#                                    for product in self.cytokine_dict[well.beads[l].glycan.type][well.decoderCells[k].lectin.name]:
-                                    self.cytokines.append(Cytokine(self.cytokine_dict[well.beads[l].glycan.type][well.decoderCells[k].lectin.name], well.decoderCells[k].x,well.decoderCells[k].y))  # Fehlermeldung, wenn irgendwas nicht im dict
+                (dx, dy, dz) = random.choice([(0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, -1), (0, -1, 0), (-1, 0, 0)])  # Grenzen festlegen...
+                well.decoderCells[k].coordinates = [sum(s) for s in zip(well.decoderCells[k].coordinates, (dx, dy, dz))]
+                for l in range(len(well.beads)):  # für jeden Bead wird geprüft, ob an der Stelle Zelle ist. Beads können nacheinander von verschiedenen Zellen gebunden werden
+                    if well.decoderCells[k].coordinates == well.beads[l].coordinates:
+                        if random.uniform(0, 10000) <= well.beads[l].glycan_density * well.decoderCells[k].lectin_density:
+                            if well.decoderCells[k].lectin.name in self.cytokine_dict[well.beads[l].glycan.type]:
+                                self.cytokines.append(Cytokine(self.cytokine_dict[well.beads[l].glycan.type][well.decoderCells[k].lectin.name], well.decoderCells[k].coordinates))# Fehlermeldung, wenn irgendwas nicht im dict
         #sowas wie Klassen Auswertung aufrufen?
         for i in range(len(self.cytokines)):
-            print(self.cytokines[i].cytokine_name)
+            print(self.cytokines[i].name, self.cytokines[i].coordinates)
         return self.cytokines
 
 
 if __name__ == "__main__":
     model = Simulation(10, 22)  # number of beads an cells
-    builder = Builder(10, 1)  # Abmessungen des Wells
+    builder = Builder(11, 21, 5)  # Abmessungen des Wells
     well = model.createModel(builder, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 100)
     model.simulate(well, 50)  # number of randomWalk steps
