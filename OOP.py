@@ -12,6 +12,11 @@
 # Markdown is supported. Would be nice to add some at the end of the project.
 
 import random
+from collections import Counter # um Elemente in cytokines zu zählen
+
+import matplotlib.pyplot as plt; plt.rcdefaults()
+import numpy as np
+import matplotlib.pyplot as plt # für Plot
 
 
 ## Dokumentation for class Cell
@@ -57,7 +62,7 @@ class Lectin:
 class Cytokine:
     def __init__(self, name, coordinates_list):
         self.name = name
-        self.coordinates = [coordinates_list]
+        self.coordinates = coordinates_list
 
 
 class Well:
@@ -126,14 +131,49 @@ class Simulation:  ## enthält (sehr simples) Dictionary für Bindungsspezifitä
                         if random.uniform(0, 10000) <= well.beads[l].glycan_density * well.decoderCells[k].lectin_density:
                             if well.decoderCells[k].lectin.name in self.cytokine_dict[well.beads[l].glycan.type]:
                                 self.cytokines.append(Cytokine(self.cytokine_dict[well.beads[l].glycan.type][well.decoderCells[k].lectin.name], well.decoderCells[k].coordinates))# Fehlermeldung, wenn irgendwas nicht im dict
-        #sowas wie Klassen Auswertung aufrufen?
-        for i in range(len(self.cytokines)):
-            print(self.cytokines[i].name, self.cytokines[i].coordinates)
         return self.cytokines
 
 
+class Analysis:
+    def __init__(self):
+        pass
+
+    def countCytokines(self, simulationResults):
+        self.cytokineAmount = []
+        names = []
+        for i in range(len(simulationResults)):
+            names.append(simulationResults[i].name)
+        self.cytokineNames = list(set(names))
+        for i in range(len(self.cytokineNames)):
+            counter = 0
+            for j in range(len(simulationResults)):
+                if self.cytokineNames[i] == simulationResults[j].name:
+                    counter += 1
+            self.cytokineAmount.append(counter)
+        print(self.cytokineNames)
+        print(self.cytokineAmount)
+
+
+    def plotCytokines(self, simulationResults):
+        self.countCytokines(simulationResults)
+        labels = self.cytokineNames
+        values = self.cytokineAmount
+
+        indexes = np.arange(len(labels))
+        width = 0.75
+
+        plt.bar(indexes, values, width)
+        plt.xticks(indexes, labels)
+        plt.show()
+
+
 if __name__ == "__main__":
-    model = Simulation(10, 22)  # number of beads an cells
+    model = Simulation(100, 22)  # number of beads an cells
     builder = Builder(11, 21, 5)  # Abmessungen des Wells
     well = model.createModel(builder, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 100)
     model.simulate(well, 50)  # number of randomWalk steps
+    auswertung = Analysis()
+#    auswertung.countCytokines(model.cytokines)
+    auswertung.plotCytokines(model.cytokines)
+
+
