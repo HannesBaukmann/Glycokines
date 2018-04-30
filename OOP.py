@@ -71,6 +71,19 @@ class Well:
         self.beads = []
         self.decoderCells = []
 
+    def borderControl(self, coordinates, dx, dy, dz):
+        coordinates = [sum(s) for s in zip(coordinates, (dx, dy, dz))]
+        if self.size[0] < abs(coordinates[0]):
+            dx = 0
+#            print("Du kannst nicht vorbei, Flamme von Xdûn!")
+        if self.size[1] < abs(coordinates[1]):
+            dy = 0
+#            print("Du kannst nicht vorbei, Flamme von Ydûn!")
+        if self.size[2] < abs(coordinates[2]):
+            dz = 0
+#            print("Du kannst nicht vorbei, Flamme von Zdûn!")
+        return dx, dy, dz
+
     def addBead(self, bead, glyan_name_string, glycan_type_string, density_int):
         self.beads.append(bead)
         bead.coordinates = [random.randint(0, self.size[0]), random.randint(0, self.size[1]), random.randint(0, self.size[2])]
@@ -122,10 +135,10 @@ class Simulation:  ## enthält (sehr simples) Dictionary für Bindungsspezifitä
         for i in range(n):
             for j in range(len(well.beads)):  # erst bewegen sich alle Beads
                 (dx, dy, dz) = random.choice([(0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, -1), (0, -1, 0), (-1, 0, 0)])  # Grenzen festlegen...
-                well.beads[j].coordinates = [sum(s) for s in zip(well.beads[j].coordinates, (dx, dy, dz))]
+                well.beads[j].coordinates = [sum(s) for s in zip(well.beads[j].coordinates, well.borderControl(well.beads[j].coordinates, dx, dy, dz))]
             for k in range(len(well.decoderCells)):  # dann bewegen sich alle Zellen
                 (dx, dy, dz) = random.choice([(0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, -1), (0, -1, 0), (-1, 0, 0)])  # Grenzen festlegen...
-                well.decoderCells[k].coordinates = [sum(s) for s in zip(well.decoderCells[k].coordinates, (dx, dy, dz))]
+                well.decoderCells[k].coordinates = [sum(s) for s in zip(well.decoderCells[k].coordinates, well.borderControl(well.decoderCells[k].coordinates, dx, dy, dz))]
                 for l in range(len(well.beads)):  # für jeden Bead wird geprüft, ob an der Stelle Zelle ist. Beads können nacheinander von verschiedenen Zellen gebunden werden
                     if well.decoderCells[k].coordinates == well.beads[l].coordinates:
                         if random.uniform(0, 10000) <= well.beads[l].glycan_density * well.decoderCells[k].lectin_density:
@@ -168,12 +181,8 @@ class Analysis:
 
 
 if __name__ == "__main__":
-    model = Simulation(100, 22)  # number of beads an cells
-    builder = Builder(11, 21, 5)  # Abmessungen des Wells
+    model = Simulation(100, 100)  # number of beads an cells
+    builder = Builder(100, 2, 100)  # Abmessungen des Wells
     well = model.createModel(builder, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 100)
-    model.simulate(well, 50)  # number of randomWalk steps
-    auswertung = Analysis()
-#    auswertung.countCytokines(model.cytokines)
-    auswertung.plotCytokines(model.cytokines)
-
-
+    model.simulate(well, 5)  # number of randomWalk steps
+    auswertung = Analysis().countCytokines(model.cytokines)
