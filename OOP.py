@@ -73,15 +73,12 @@ class Well:
 
     def borderControl(self, coordinates, dx, dy, dz):
         coordinates = [sum(s) for s in zip(coordinates, (dx, dy, dz))]
-        if self.size[0] < abs(coordinates[0]):
+        if self.size[0] < abs(coordinates[0]) or 0 > coordinates[0]:
             dx = 0
-#            print("Du kannst nicht vorbei, Flamme von Xdûn!")
-        if self.size[1] < abs(coordinates[1]):
+        if self.size[1] < abs(coordinates[1]) or 0 > coordinates[1]:
             dy = 0
-#            print("Du kannst nicht vorbei, Flamme von Ydûn!")
-        if self.size[2] < abs(coordinates[2]):
+        if self.size[2] < abs(coordinates[2]) or 0 > coordinates[2]:
             dz = 0
-#            print("Du kannst nicht vorbei, Flamme von Zdûn!")
         return dx, dy, dz
 
     def addBead(self, bead, glyan_name_string, glycan_type_string, density_int):
@@ -136,6 +133,7 @@ class Simulation:  ## enthält (sehr simples) Dictionary für Bindungsspezifitä
             for j in range(len(well.beads)):  # erst bewegen sich alle Beads
                 (dx, dy, dz) = random.choice([(0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, -1), (0, -1, 0), (-1, 0, 0)])  # Grenzen festlegen...
                 well.beads[j].coordinates = [sum(s) for s in zip(well.beads[j].coordinates, well.borderControl(well.beads[j].coordinates, dx, dy, dz))]
+                print(well.beads[j].coordinates)
             for k in range(len(well.decoderCells)):  # dann bewegen sich alle Zellen
                 (dx, dy, dz) = random.choice([(0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, -1), (0, -1, 0), (-1, 0, 0)])  # Grenzen festlegen...
                 well.decoderCells[k].coordinates = [sum(s) for s in zip(well.decoderCells[k].coordinates, well.borderControl(well.decoderCells[k].coordinates, dx, dy, dz))]
@@ -181,8 +179,8 @@ class Analysis:
 
 
 if __name__ == "__main__":
-    model = Simulation(100, 100)  # number of beads an cells
-    builder = Builder(100, 2, 100)  # Abmessungen des Wells
-    well = model.createModel(builder, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 100)
-    model.simulate(well, 5)  # number of randomWalk steps
+    model = Simulation(500, 100)  # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x so viele beads
+    builder = Builder(60, 60, 42)  # Abmessungen des Wells; entspricht 2.5ul bei 1 pt=10 um
+    well = model.createModel(builder, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 75, ["DC-SIGN"], 25)
+    model.simulate(well, 45)  # number of randomWalk steps
     auswertung = Analysis().countCytokines(model.cytokines)
