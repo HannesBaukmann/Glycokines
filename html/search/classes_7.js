@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['type1',['Type1',['../classprototype_1_1_type1.html',1,'prototype']]],
-  ['type2',['Type2',['../classprototype_1_1_type2.html',1,'prototype']]]
+  ['well',['Well',['../class_o_o_p_1_1_well.html',1,'OOP']]]
 ];

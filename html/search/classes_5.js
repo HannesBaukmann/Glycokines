@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['objectfactory',['ObjectFactory',['../classprototype_1_1_object_factory.html',1,'prototype']]]
+  ['lectin',['Lectin',['../class_o_o_p_1_1_lectin.html',1,'OOP']]]
 ];
