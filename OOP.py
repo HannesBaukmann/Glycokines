@@ -1,6 +1,6 @@
 ## Description of this project.
 #
-# Ueberschift!
+# Ueberschift
 # ============
 #
 # @package HannesOOPProject
