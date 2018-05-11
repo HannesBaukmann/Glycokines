@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hannesoopproject',['HannesOOPProject',['../namespace_hannes_o_o_p_project.html',1,'']]]
+  ['glycan',['Glycan',['../class_o_o_p__np_array_1_1_glycan.html',1,'OOP_npArray']]]
 ];
