@@ -17,9 +17,8 @@ Inheritance diagram for O\+O\+P\+\_\+np\+Array.\+Well\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_o_o_p__np_array_1_1_well_ab7cb865616e6fd3e6e98604400329f0c}\label{class_o_o_p__np_array_1_1_well_ab7cb865616e6fd3e6e98604400329f0c}} 
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, x, y, z)
 \item 
-\mbox{\Hypertarget{class_o_o_p__np_array_1_1_well_a8991b9d19614962be6a088031f780554}\label{class_o_o_p__np_array_1_1_well_a8991b9d19614962be6a088031f780554}} 
-def {\bfseries border\+Control} (self, coordinates, dx, dy, dz)
-\end{DoxyCompactItemize}
+def \mbox{\hyperlink{class_o_o_p__np_array_1_1_well_a8991b9d19614962be6a088031f780554}{border\+Control}} (self, coordinates, dx, dy, dz)
+\begin{DoxyCompactList}\small\item\em The method border\+Control ensures that objects\textquotesingle{} coordinates don\textquotesingle{}t exceed the well\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,6 +35,30 @@ It serves a a superclass for two subclasses of which one uses Num\+Py Arrays as 
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\tt in}  & {\em \mbox{[}x,y,z\mbox{]}} & Size of the well. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_o_p__np_array_1_1_well_a8991b9d19614962be6a088031f780554}\label{class_o_o_p__np_array_1_1_well_a8991b9d19614962be6a088031f780554}} 
+\index{O\+O\+P\+\_\+np\+Array\+::\+Well@{O\+O\+P\+\_\+np\+Array\+::\+Well}!border\+Control@{border\+Control}}
+\index{border\+Control@{border\+Control}!O\+O\+P\+\_\+np\+Array\+::\+Well@{O\+O\+P\+\_\+np\+Array\+::\+Well}}
+\subsubsection{\texorpdfstring{border\+Control()}{borderControl()}}
+{\footnotesize\ttfamily def O\+O\+P\+\_\+np\+Array.\+Well.\+border\+Control (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{coordinates,  }\item[{}]{dx,  }\item[{}]{dy,  }\item[{}]{dz }\end{DoxyParamCaption})}
+
+
+
+The method border\+Control ensures that objects\textquotesingle{} coordinates don\textquotesingle{}t exceed the well\textquotesingle{}s size. 
+
+If a step in random\+Walk would lead to a forbidden value, the respective step value will be set to 0 and the object won\textquotesingle{}t move this turn as if repelled from the well\textquotesingle{}s borders.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em coordinates} & The object\textquotesingle{}s coordinates before the move. \\
+\hline
+\mbox{\tt in}  & {\em dx,dy,dz} & The randomly chosen next steps. \\
+\hline
+\mbox{\tt out}  & {\em dx,dy,dz} & The \\
 \hline
 \end{DoxyParams}
 

@@ -3,135 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="c739da01-1cfb-4318-9f11-4eb0ece290a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/OOP.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/doxtest2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/annotated.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/bc_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/bdwn.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_analysis-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_analysis.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_bead-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_bead.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_bead.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_builder-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_builder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_cytokine-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_cytokine.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_decoder_cell-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_decoder_cell.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_decoder_cell.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_glycan-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_glycan.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_lectin-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_lectin.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_simulation.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_sphere-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_sphere.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_sphere.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_well-members.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/class_o_o_p_1_1_well.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/classes.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/closed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/doc.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/doxygen.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/doxygen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/dynsections.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/folderclosed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/folderopen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/hierarchy.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/md__r_e_a_d_m_e.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/menu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/menudata.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/namespace_hannes_o_o_p_project.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/namespaces.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/nav_f.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/nav_g.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/nav_h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/open.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/pages.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_4.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_4.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_5.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_6.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_6.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_7.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_8.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_8.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_9.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/all_9.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_1.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_3.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_3.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_4.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_4.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_5.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_5.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_6.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_6.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_7.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/classes_7.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/mag_sel.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/namespaces_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/namespaces_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/nomatches.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/pages_0.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/pages_0.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search_l.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search_m.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/search_r.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/search/searchdata.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/splitbar.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/sync_off.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/sync_on.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tab_a.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tab_b.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tab_h.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tab_s.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/html/tabs.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/Makefile" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/annotated.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_analysis.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_bead.eps" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_bead.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_bead.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_builder.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_cytokine.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_decoder_cell.eps" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_decoder_cell.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_decoder_cell.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_glycan.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_lectin.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_simulation.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_sphere.eps" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_sphere.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_sphere.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_well.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/doxygen.sty" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/hierarchy.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/md__r_e_a_d_m_e.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/namespace_hannes_o_o_p_project.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/namespaces.tex" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/latex/refman.tex" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/OOP_npArray.py" afterPath="$PROJECT_DIR$/OOP_npArray.py" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_decoder_cell.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_decoder_cell.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well-members.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__list-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__list-members.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__list.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__list.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__np_array-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__np_array-members.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__np_array.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__np_array.html" />
+      <change beforePath="$PROJECT_DIR$/html/functions.html" afterPath="$PROJECT_DIR$/html/functions.html" />
+      <change beforePath="$PROJECT_DIR$/html/functions_func.html" afterPath="$PROJECT_DIR$/html/functions_func.html" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_1.js" afterPath="$PROJECT_DIR$/html/search/all_1.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_1.js" afterPath="$PROJECT_DIR$/html/search/functions_1.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/searchdata.js" afterPath="$PROJECT_DIR$/html/search/searchdata.js" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_bead.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_bead.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.tex" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_sphere.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_sphere.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.tex" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__list.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__list.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__np_array.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__np_array.pdf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -145,8 +37,8 @@
       <file leaf-file-name="OOP_npArray.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+            <state relative-caret-position="394">
+              <caret line="165" column="17" lean-forward="false" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -375,7 +267,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23579545" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2462908" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24861" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -402,36 +294,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/awesome3D.py" />
-    <entry file="file://$PROJECT_DIR$/doxtest.py" />
-    <entry file="file://$PROJECT_DIR$/prototype.py" />
-    <entry file="file://$PROJECT_DIR$/simple3D.py" />
-    <entry file="file://$PROJECT_DIR$/2DTurtles.py" />
-    <entry file="file://$PROJECT_DIR$/OOP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doxtest.py" />
-    <entry file="file://$PROJECT_DIR$/prototype.py" />
-    <entry file="file://$PROJECT_DIR$/simple3D.py" />
-    <entry file="file://$PROJECT_DIR$/2DTurtles.py" />
-    <entry file="file://$PROJECT_DIR$/awesome3D.py" />
-    <entry file="file://$PROJECT_DIR$/OOP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="99" column="32" lean-forward="false" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/awesome3D.py" />
+    <entry file="file://$PROJECT_DIR$/doxtest.py" />
+    <entry file="file://$PROJECT_DIR$/prototype.py" />
+    <entry file="file://$PROJECT_DIR$/simple3D.py" />
+    <entry file="file://$PROJECT_DIR$/2DTurtles.py" />
+    <entry file="file://$PROJECT_DIR$/OOP.py" />
+    <entry file="file://$PROJECT_DIR$/doxtest.py" />
+    <entry file="file://$PROJECT_DIR$/prototype.py" />
+    <entry file="file://$PROJECT_DIR$/simple3D.py" />
+    <entry file="file://$PROJECT_DIR$/2DTurtles.py" />
+    <entry file="file://$PROJECT_DIR$/awesome3D.py" />
+    <entry file="file://$PROJECT_DIR$/OOP.py" />
+    <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="165" column="17" lean-forward="false" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
           <folding />
         </state>
       </provider>

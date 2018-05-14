@@ -92,8 +92,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab7cb865616e6fd3e6e98604400329f0c"><td class="memItemLeft" align="right" valign="top"><a id="ab7cb865616e6fd3e6e98604400329f0c"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, x, y, z)</td></tr>
 <tr class="separator:ab7cb865616e6fd3e6e98604400329f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8991b9d19614962be6a088031f780554"><td class="memItemLeft" align="right" valign="top"><a id="a8991b9d19614962be6a088031f780554"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>borderControl</b> (self, coordinates, dx, dy, dz)</td></tr>
+<tr class="memitem:a8991b9d19614962be6a088031f780554"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_o_p__np_array_1_1_well.html#a8991b9d19614962be6a088031f780554">borderControl</a> (self, coordinates, dx, dy, dz)</td></tr>
+<tr class="memdesc:a8991b9d19614962be6a088031f780554"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method borderControl ensures that objects' coordinates don't exceed the well's size.  <a href="#a8991b9d19614962be6a088031f780554">More...</a><br /></td></tr>
 <tr class="separator:a8991b9d19614962be6a088031f780554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -111,7 +111,65 @@ Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8991b9d19614962be6a088031f780554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8991b9d19614962be6a088031f780554">&#9670;&nbsp;</a></span>borderControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def OOP_npArray.Well.borderControl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>coordinates</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The method borderControl ensures that objects' coordinates don't exceed the well's size. </p>
+<p>If a step in randomWalk would lead to a forbidden value, the respective step value will be set to 0 and the object won't move this turn as if repelled from the well's borders.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">coordinates</td><td>The object's coordinates before the move. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dx,dy,dz</td><td>The randomly chosen next steps. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dx,dy,dz</td><td>The </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>OOP_npArray.py</li>
 </ul>
 </div><!-- contents -->

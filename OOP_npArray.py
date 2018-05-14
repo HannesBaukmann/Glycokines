@@ -71,6 +71,12 @@ class Glycan:
 ## \brief DecoderCell is a subclass of Sphere and represents immune cells (such as THP-1 cells) that express Lectins
 # which bind to Glycan structures and engage in immune response by secreting cytokines.
 #
+# | Right | Center | Left  |
+# | ----: | :----: | :---- |
+# | 10    | 10     |    10 |
+# | 1000  |   1000 |  1000 |
+#
+# \f$\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\f$
 
 class DecoderCell(Sphere):
     def __init__(self, *args):
@@ -117,13 +123,21 @@ class Cytokine:
 # of which one uses NumPy Arrays as a container for onjects of the classes Bead and DecoderCell while the other one uses
 # built-in Python lists for this purpose.
 #
-# \param[in] [x, y, z] Size of the well.
+# \param[in] x, y, z Size of the well.
 
 class Well:
     def __init__(self, x, y, z):
         if x <= 0 or y <= 0 or z <= 0:
             sys.exit("Illegal Well dimensions! Please enter values larger than zero!")
         self.size = [x, y, z]
+
+    ## The method borderControl ensures that objects' coordinates don't exceed the well's size. If a step in randomWalk
+    # would lead to a forbidden value, the respective step value will be set to 0 and the object won't move this turn as
+    # if repelled from the well's borders.
+    #
+    # \param[in] coordinates The object's coordinates before the move.
+    # \param[in] dx, dy, dz The randomly chosen next steps.
+    # \param[out] dx, dy, dz The revised next steps
 
     def borderControl(self, coordinates, dx, dy, dz):
         coordinates = [sum(s) for s in zip(coordinates, (dx, dy, dz))]
@@ -135,12 +149,21 @@ class Well:
             dz = 0
         return dx, dy, dz
 
+## Subclass of Well using built-in python lists as containers for objects of the classes Bead and DecoderCell.
+#
 
 class Well_list(Well):
     def __init__(self, x, y, z, n_beads, n_cells):
         super().__init__(x, y, z)
         self.beads = []
         self.decoderCells = []
+
+    ## Method to add objects of class Bead to the bead list. Coordinates of the Bead are randomly chosen between 0 and
+    # size of the Well in the respective dimension.
+    #
+    # \param[in] i Not used here, but neccessary for convenient switching between container types.
+    # \param[in] bead Object of class Bead to be added.
+    # \param[in] 
 
     def addBead(self, i, bead, glyan_name_string, glycan_type_string, density_percentage):
         self.beads.append(bead)
