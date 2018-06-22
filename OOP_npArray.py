@@ -12,6 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt # für Plot
 import sys
 import time
+import operator
 
 
 ## \brief Sphere serves as superclass for the two spherical objects indroduced below.
@@ -76,7 +77,7 @@ class Glycan:
 # | 10    | 10     |    10 |
 # | 1000  |   1000 |  1000 |
 #
-# \f$\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\f$
+# \f$ \sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \f$
 
 class DecoderCell(Sphere):
     def __init__(self, *args):
@@ -129,7 +130,7 @@ class Well:
     def __init__(self, x, y, z):
         if x <= 0 or y <= 0 or z <= 0:
             sys.exit("Illegal Well dimensions! Please enter values larger than zero!")
-        self.size = [x, y, z]
+#        self.size = [x, y, z]
 
     ## The method borderControl ensures that objects' coordinates don't exceed the well's size. If a step in randomWalk
     # would lead to a forbidden value, the respective step value will be set to 0 and the object won't move this turn as
@@ -155,6 +156,7 @@ class Well:
 class Well_list(Well):
     def __init__(self, x, y, z, n_beads, n_cells):
         super().__init__(x, y, z)
+        self.size=[x, y, z]
         self.beads = []
         self.decoderCells = []
 
@@ -179,17 +181,18 @@ class Well_list(Well):
 class Well_npArray(Well):
     def __init__(self, x, y, z, n_beads, n_cells):
         super().__init__(x, y, z)
+        self.size = np.array([x, y, z])
         self.beads = np.empty(n_beads, dtype=object)
         self.decoderCells = np.empty(n_cells, dtype=object)
 
     def addBead(self, i, bead, glyan_name_string, glycan_type_string, density_percentage):
         self.beads[i]=bead
-        bead.coordinates = [random.randint(0, self.size[0]), random.randint(0, self.size[1]), random.randint(0, self.size[2])]
+        bead.coordinates = np.array([random.randint(0, self.size[0]), random.randint(0, self.size[1]), random.randint(0, self.size[2])])
         bead.attachGlycans(glyan_name_string, glycan_type_string, density_percentage)
 
     def addDecoderCell(self, i, decoderCell, lectin_name_string, lectin_type_string):
         self.decoderCells[i] = decoderCell
-        decoderCell.coordinates = [random.randint(0, self.size[0]), random.randint(0, self.size[1]), random.randint(0, self.size[2])]
+        decoderCell.coordinates = np.array([random.randint(0, self.size[0]), random.randint(0, self.size[1]), random.randint(0, self.size[2])])
         decoderCell.expressLectins(lectin_name_string, lectin_type_string)
 
 
@@ -209,7 +212,7 @@ class Builder:
         self.well.addDecoderCell(i, DecoderCell(ID), lectin_name_string, density_percentage)
 
 
-class Simulation:  ## enthält (sehr simples) Dictionary für Bindungsspezifität und Cytokinexpression
+class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität und Cytokinexpression
     def __init__(self, numberOfBeads, numberOfDecoderCells):
         self.n_beads = numberOfBeads
         self.n_decoder = numberOfDecoderCells
@@ -241,16 +244,32 @@ class Simulation:  ## enthält (sehr simples) Dictionary für Bindungsspezifitä
             builder.buildDecoderCell(i, ID, lectin_list, lectin_density)
         return builder.well
 
+#    def produceCytokines (self, well, coordinates, k, l):
+#        if random.uniform(0, 10000) <= well.beads[l].glycan_density * well.decoderCells[k].lectin_density:
+#            if well.decoderCells[k].lectin.name in self.cytokine_dict[well.beads[l].glycan.type]:
+#                self.cytokines.append(Cytokine(self.cytokine_dict[well.beads[l].glycan.type][well.decoderCells[k].lectin.name],well.decoderCells[k].coordinates))
+
     def simulate(self, well, n):
         for i in range(n):
             for j in range(len(well.beads)):  # erst bewegen sich alle Beads
                 (dx, dy, dz) = random.choice([(0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, -1), (0, -1, 0), (-1, 0, 0)])
-                well.beads[j].coordinates = [sum(s) for s in zip(well.beads[j].coordinates, well.borderControl(well.beads[j].coordinates, dx, dy, dz))]
+#                well.beads[j].coordinates = [sum(s) for s in zip(well.beads[j].coordinates, well.borderControl(well.beads[j].coordinates, dx, dy, dz))]
+                dc=well.borderControl(well.beads[j].coordinates, dx, dy, dz)
+                for (i, coordinate) in enumerate(well.beads[j].coordinates):
+                    well.beads[j].coordinates[i] += dc[i]
             for k in range(len(well.decoderCells)):  # dann bewegen sich alle Zellen
                 (dx, dy, dz) = random.choice([(0, 0, 1), (0, 1, 0), (1, 0, 0), (0, 0, -1), (0, -1, 0), (-1, 0, 0)])
-                well.decoderCells[k].coordinates = [sum(s) for s in zip(well.decoderCells[k].coordinates, well.borderControl(well.decoderCells[k].coordinates, dx, dy, dz))]
+#                well.decoderCells[k].coordinates = [sum(s) for s in zip(well.decoderCells[k].coordinates, well.borderControl(well.decoderCells[k].coordinates, dx, dy, dz))]
+                dc=well.borderControl(well.decoderCells[k].coordinates, dx, dy, dz)
+                for (i, coordinate) in enumerate(well.decoderCells[k].coordinates):
+                    well.decoderCells[k].coordinates[i] += dc[i]
                 for l in range(len(well.beads)):  # für jeden Bead wird geprüft, ob an der Stelle Zelle ist. Beads können nacheinander von verschiedenen Zellen gebunden werden
-                    if well.decoderCells[k].coordinates == well.beads[l].coordinates:
+                    same = True
+                    for i in range(len(well.decoderCells[k].coordinates)):
+                        same = (well.decoderCells[k].coordinates[i] == well.beads[l].coordinates[i])
+#                        print(same)
+                    if same:
+#                    if (well.decoderCells[k].coordinates == well.beads[l].coordinates).all():
                         if random.uniform(0, 10000) <= well.beads[l].glycan_density * well.decoderCells[k].lectin_density:
                             if well.decoderCells[k].lectin.name in self.cytokine_dict[well.beads[l].glycan.type]:
                                 self.cytokines.append(Cytokine(self.cytokine_dict[well.beads[l].glycan.type][well.decoderCells[k].lectin.name], well.decoderCells[k].coordinates))
@@ -289,14 +308,42 @@ class Analysis:
         plt.xticks(indexes, labels)
         plt.show()
 
-start_time = time.time()
 if __name__ == "__main__":
-#    for n_cells in range(1000): # größere Schritte?
-        n_cells=1
-        n_beads = 5*n_cells
-        model = Simulation(n_beads, n_cells)  # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x so viele beads
-        builder = Builder(6, 6, 42)  # Abmessungen des Wells; entspricht 2.5ul bei 1 pt=10 um
-        well = model.createModel(builder, Well_list, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77)
-        model.simulate(well, 1) #number of randomWalk steps
-        auswertung = Analysis().countCytokines(model.cytokines)
-print("--- %s seconds ---" % (time.time() - start_time))
+#    comparison = True
+    comparison = input("Vergleichen? ")
+    if comparison:
+        t_list = []
+        t_npArray = []
+        n_range = [5, 10, 50, 100, 500]
+        for i in range(len(n_range)):
+            n_cells=n_range[i]
+            n_beads = 5*n_cells
+            n_total = n_cells + n_beads
+            model = Simulation(n_beads, n_cells)  # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x so viele beads
+            builder = Builder(6, 6, 42)  # Abmessungen des Wells; entspricht 2.5ul bei 1 pt=10 um
+            start_time = time.time()
+            well = model.createModel(builder, Well_list, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77)
+            model.simulate(well, 1) #number of randomWalk steps
+            t_list.append(time.time() - start_time)
+            print(t_list)
+            start_time = time.time()
+            well = model.createModel(builder, Well_npArray, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77)
+            model.simulate(well, 1) #number of randomWalk steps
+            t_npArray.append(time.time() - start_time)
+            print(t_npArray)
+
+
+
+#        if isinstance(well.beads, np.ndarray):
+#            print("si")
+#        else:
+#            print("nope")
+#        print(type(well.beads[0].coordinates))
+        fig = plt.figure()
+        ax1 = fig.add_subplot(111)
+        ax1.scatter(n_range, t_list, s=10, c='b', marker="s", label='list')
+        ax1.scatter(n_range, t_npArray, s=10, c='r', marker="o", label='npArray')
+        plt.legend(loc='upper left');
+        plt.show()
+#    else:
+#        auswertung = Analysis().plotCytokines(model.cytokines)
