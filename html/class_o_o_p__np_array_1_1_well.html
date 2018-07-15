@@ -67,7 +67,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_o_o_p__np_array_1_1_well-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">OOP_npArray.Well Class Reference</div>  </div>
@@ -82,7 +81,7 @@ Inheritance diagram for OOP_npArray.Well:</div>
  <div class="center">
   <img src="class_o_o_p__np_array_1_1_well.png" usemap="#OOP_5FnpArray.Well_map" alt=""/>
   <map id="OOP_5FnpArray.Well_map" name="OOP_5FnpArray.Well_map">
-<area href="class_o_o_p__np_array_1_1_well__list.html" alt="OOP_npArray.Well_list" shape="rect" coords="0,56,176,80"/>
+<area href="class_o_o_p__np_array_1_1_well__list.html" title="Subclass of Well using built-in python lists as containers for objects of the classes Bead and Decode..." alt="OOP_npArray.Well_list" shape="rect" coords="0,56,176,80"/>
 <area href="class_o_o_p__np_array_1_1_well__np_array.html" alt="OOP_npArray.Well_npArray" shape="rect" coords="186,56,362,80"/>
 </map>
  </div></div>
@@ -95,19 +94,13 @@ def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, x,
 <tr class="memitem:a8991b9d19614962be6a088031f780554"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_o_p__np_array_1_1_well.html#a8991b9d19614962be6a088031f780554">borderControl</a> (self, coordinates, dx, dy, dz)</td></tr>
 <tr class="memdesc:a8991b9d19614962be6a088031f780554"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method borderControl ensures that objects' coordinates don't exceed the well's size.  <a href="#a8991b9d19614962be6a088031f780554">More...</a><br /></td></tr>
 <tr class="separator:a8991b9d19614962be6a088031f780554"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a7ef6da8f1d375133df8edff40ef3d48d"><td class="memItemLeft" align="right" valign="top"><a id="a7ef6da8f1d375133df8edff40ef3d48d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
-<tr class="separator:a7ef6da8f1d375133df8edff40ef3d48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class <a class="el" href="class_o_o_p__np_array_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a> describes the sample, in which binding events take place. </p>
 <p>It serves a a superclass for two subclasses of which one uses NumPy Arrays as a container for onjects of the classes <a class="el" href="class_o_o_p__np_array_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of PMMA, or acrylic glass) loaded with glycan...">Bead</a> and <a class="el" href="class_o_o_p__np_array_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells (such as THP-1 cells) that express Le...">DecoderCell</a> while the other one uses built-in Python lists for this purpose.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">[x,y,z]</td><td>Size of the well. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x,y,z</td><td>Size of the well. </td></tr>
   </table>
   </dd>
 </dl>
@@ -162,7 +155,7 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coordinates</td><td>The object's coordinates before the move. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dx,dy,dz</td><td>The randomly chosen next steps. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">dx,dy,dz</td><td>The </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dx,dy,dz</td><td>The revised next steps </td></tr>
   </table>
   </dd>
 </dl>

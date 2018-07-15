@@ -73,6 +73,9 @@ $(function() {
 <div class="title">OOP_npArray.Well_list Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Subclass of <a class="el" href="class_o_o_p__np_array_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a> using built-in python lists as containers for objects of the classes <a class="el" href="class_o_o_p__np_array_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of PMMA, or acrylic glass) loaded with glycan...">Bead</a> and <a class="el" href="class_o_o_p__np_array_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells (such as THP-1 cells) that express Le...">DecoderCell</a>.  
+ <a href="class_o_o_p__np_array_1_1_well__list.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for OOP_npArray.Well_list:</div>
 <div class="dyncontent">
@@ -88,8 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a34452e04bc0aa035ca3049b2a4cbe5bd"><td class="memItemLeft" align="right" valign="top"><a id="a34452e04bc0aa035ca3049b2a4cbe5bd"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, x, y, z, n_beads, n_cells)</td></tr>
 <tr class="separator:a34452e04bc0aa035ca3049b2a4cbe5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0961c99dd36f4417bc5c7f3cfe81b67"><td class="memItemLeft" align="right" valign="top"><a id="ae0961c99dd36f4417bc5c7f3cfe81b67"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>addBead</b> (self, i, bead, glyan_name_string, glycan_type_string, density_percentage)</td></tr>
+<tr class="memitem:ae0961c99dd36f4417bc5c7f3cfe81b67"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_o_p__np_array_1_1_well__list.html#ae0961c99dd36f4417bc5c7f3cfe81b67">addBead</a> (self, i, bead, glyan_name_string, glycan_type_string, density_percentage)</td></tr>
+<tr class="memdesc:ae0961c99dd36f4417bc5c7f3cfe81b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to add objects of class <a class="el" href="class_o_o_p__np_array_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of PMMA, or acrylic glass) loaded with glycan...">Bead</a> to the bead list.  <a href="#ae0961c99dd36f4417bc5c7f3cfe81b67">More...</a><br /></td></tr>
 <tr class="separator:ae0961c99dd36f4417bc5c7f3cfe81b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4faff6c708781f38124239448043117c"><td class="memItemLeft" align="right" valign="top"><a id="a4faff6c708781f38124239448043117c"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>addDecoderCell</b> (self, i, decoderCell, lectin_name_string, lectin_type_string)</td></tr>
@@ -104,17 +107,82 @@ def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, x,
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a04f23430cc3154d47b51bfe2b12e8bfb"><td class="memItemLeft" align="right" valign="top"><a id="a04f23430cc3154d47b51bfe2b12e8bfb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="separator:a04f23430cc3154d47b51bfe2b12e8bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5155967229f404a247799167c5c637a5"><td class="memItemLeft" align="right" valign="top"><a id="a5155967229f404a247799167c5c637a5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>beads</b></td></tr>
 <tr class="separator:a5155967229f404a247799167c5c637a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5516771f8d44ae1c00b78abf101d5a6"><td class="memItemLeft" align="right" valign="top"><a id="ab5516771f8d44ae1c00b78abf101d5a6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>decoderCells</b></td></tr>
 <tr class="separator:ab5516771f8d44ae1c00b78abf101d5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_class_o_o_p__np_array_1_1_well"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_o_o_p__np_array_1_1_well')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_o_o_p__np_array_1_1_well.html">OOP_npArray.Well</a></td></tr>
-<tr class="memitem:a7ef6da8f1d375133df8edff40ef3d48d inherit pub_attribs_class_o_o_p__np_array_1_1_well"><td class="memItemLeft" align="right" valign="top"><a id="a7ef6da8f1d375133df8edff40ef3d48d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
-<tr class="separator:a7ef6da8f1d375133df8edff40ef3d48d inherit pub_attribs_class_o_o_p__np_array_1_1_well"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Subclass of <a class="el" href="class_o_o_p__np_array_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a> using built-in python lists as containers for objects of the classes <a class="el" href="class_o_o_p__np_array_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of PMMA, or acrylic glass) loaded with glycan...">Bead</a> and <a class="el" href="class_o_o_p__np_array_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells (such as THP-1 cells) that express Le...">DecoderCell</a>. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae0961c99dd36f4417bc5c7f3cfe81b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0961c99dd36f4417bc5c7f3cfe81b67">&#9670;&nbsp;</a></span>addBead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def OOP_npArray.Well_list.addBead </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>bead</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>glyan_name_string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>glycan_type_string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>density_percentage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method to add objects of class <a class="el" href="class_o_o_p__np_array_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of PMMA, or acrylic glass) loaded with glycan...">Bead</a> to the bead list. </p>
+<p>Coordinates of the <a class="el" href="class_o_o_p__np_array_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of PMMA, or acrylic glass) loaded with glycan...">Bead</a> are randomly chosen between 0 and size of the <a class="el" href="class_o_o_p__np_array_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a> in the respective dimension.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Not used here, but neccessary for convenient switching between container types. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bead</td><td>Object of class <a class="el" href="class_o_o_p__np_array_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of PMMA, or acrylic glass) loaded with glycan...">Bead</a> to be added. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>OOP_npArray.py</li>
 </ul>

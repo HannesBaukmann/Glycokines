@@ -4,6 +4,20 @@
 # ============
 #
 # @package HannesOOPProject
+# THP-1 cells are about 15 um in diameter, while beads typically are few um in size. Therefore, 1 pt in this program
+# corresponds to 10 um in reality.
+# Size of well:
+# The (round) basis of a well has an area of 0.36 cm2. Here, we consider a quadratic basis, hence x=y=0.06 cm2. With
+# 1pt = 10 um, x=y=600pt
+# Typical volume is 25 ul. Hence, the height of the liquid in a well is \f$ 25 \mu l = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m =
+# 420 pt \f$.
+# Typical experiment takes 30 minutes or 1800 s. How many steps does that correlate to? How fast does a particle of 10 um / 1 pt in diameter diffuse?
+# Stokes-Einstein equation:
+# \f$ x^2 = \frac{k_B \cdot T}{3r \pi \eta} t = 4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot t \f$
+# (D_H_2O (25°C) = 0.891 mPa \cdot s)
+# At 1 s, the medium ... is 7 \cdot 10^{-7} m^2.
+# Therefore, a typical experiment of 30 minutes corresponds to \f$ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m \f$, or 126 steps.
+# 25 grad
 
 import random
 from collections import Counter # um Elemente in cytokines zu zählen
@@ -211,7 +225,7 @@ class Builder:
     def buildDecoderCell(self, i, ID, lectin_name_string, density_percentage):
         self.well.addDecoderCell(i, DecoderCell(ID), lectin_name_string, density_percentage)
 
-
+## Dictionary is based on Geijtenbeek & Gringhuis C-type lectin receptors in the control of T helper cell differentiation Nature Reviews Immunology volume 16, pages 433–448 (2016)
 class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität und Cytokinexpression
     def __init__(self, numberOfBeads, numberOfDecoderCells):
         self.n_beads = numberOfBeads
@@ -309,9 +323,8 @@ class Analysis:
         plt.show()
 
 if __name__ == "__main__":
-#    comparison = True
-    comparison = input("Vergleichen? ")
-    if comparison:
+    comparison = input("Laufzeitvergleich machen (True/False)? ")
+    if comparison == "True":
         t_list = []
         t_npArray = []
         n_range = [5, 10, 50, 100, 500]
@@ -319,7 +332,7 @@ if __name__ == "__main__":
             n_cells=n_range[i]
             n_beads = 5*n_cells
             n_total = n_cells + n_beads
-            model = Simulation(n_beads, n_cells)  # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x so viele beads
+            model = Simulation(n_beads, n_cells)  # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x (5x) so viele beads
             builder = Builder(6, 6, 42)  # Abmessungen des Wells; entspricht 2.5ul bei 1 pt=10 um
             start_time = time.time()
             well = model.createModel(builder, Well_list, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77)
@@ -345,5 +358,6 @@ if __name__ == "__main__":
         ax1.scatter(n_range, t_npArray, s=10, c='r', marker="o", label='npArray')
         plt.legend(loc='upper left');
         plt.show()
-#    else:
+    else:
+        print("wibe")
 #        auswertung = Analysis().plotCytokines(model.cytokines)

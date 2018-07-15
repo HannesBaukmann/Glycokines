@@ -1,1 +1,4 @@
 \form#0:$\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
+\form#1:$ \sqrt{(x_2-x_1)^2+(y_2-y_1)^2} $
+\form#2:$ 25 \mu l = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m = 420 pt $
+\form#3:$ x^2 = \frac{k_B \cdot T}{3r \pi \eta} t = 4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot t $

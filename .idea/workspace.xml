@@ -2,7 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c739da01-1cfb-4318-9f11-4eb0ece290a0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/OOP_npArray.py" afterPath="$PROJECT_DIR$/OOP_npArray.py" />
+      <change beforePath="$PROJECT_DIR$/html/annotated.html" afterPath="$PROJECT_DIR$/html/annotated.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_decoder_cell.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_decoder_cell.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_simulation.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_simulation.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well-members.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__list-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__list-members.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__list.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__list.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__np_array-members.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__np_array-members.html" />
+      <change beforePath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__np_array.html" afterPath="$PROJECT_DIR$/html/class_o_o_p__np_array_1_1_well__np_array.html" />
+      <change beforePath="$PROJECT_DIR$/html/classes.html" afterPath="$PROJECT_DIR$/html/classes.html" />
+      <change beforePath="$PROJECT_DIR$/html/formula.repository" afterPath="$PROJECT_DIR$/html/formula.repository" />
+      <change beforePath="$PROJECT_DIR$/html/functions.html" afterPath="$PROJECT_DIR$/html/functions.html" />
+      <change beforePath="$PROJECT_DIR$/html/functions_func.html" afterPath="$PROJECT_DIR$/html/functions_func.html" />
+      <change beforePath="$PROJECT_DIR$/html/hierarchy.html" afterPath="$PROJECT_DIR$/html/hierarchy.html" />
+      <change beforePath="$PROJECT_DIR$/html/md__r_e_a_d_m_e.html" afterPath="$PROJECT_DIR$/html/md__r_e_a_d_m_e.html" />
+      <change beforePath="$PROJECT_DIR$/html/namespace_hannes_o_o_p_project.html" afterPath="$PROJECT_DIR$/html/namespace_hannes_o_o_p_project.html" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_0.js" afterPath="$PROJECT_DIR$/html/search/all_0.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_1.js" afterPath="$PROJECT_DIR$/html/search/all_1.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_2.js" afterPath="$PROJECT_DIR$/html/search/all_2.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_3.js" afterPath="$PROJECT_DIR$/html/search/all_3.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_5.js" afterPath="$PROJECT_DIR$/html/search/all_5.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_7.js" afterPath="$PROJECT_DIR$/html/search/all_7.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_9.js" afterPath="$PROJECT_DIR$/html/search/all_9.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_a.js" afterPath="$PROJECT_DIR$/html/search/all_a.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_0.js" afterPath="$PROJECT_DIR$/html/search/classes_0.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_1.js" afterPath="$PROJECT_DIR$/html/search/classes_1.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_2.js" afterPath="$PROJECT_DIR$/html/search/classes_2.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_3.js" afterPath="$PROJECT_DIR$/html/search/classes_3.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_4.js" afterPath="$PROJECT_DIR$/html/search/classes_4.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_5.js" afterPath="$PROJECT_DIR$/html/search/classes_5.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_6.js" afterPath="$PROJECT_DIR$/html/search/classes_6.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_7.js" afterPath="$PROJECT_DIR$/html/search/classes_7.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_0.js" afterPath="$PROJECT_DIR$/html/search/functions_0.js" />
+      <change beforePath="$PROJECT_DIR$/latex/annotated.tex" afterPath="$PROJECT_DIR$/latex/annotated.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_bead.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_bead.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.tex" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_simulation.tex" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_simulation.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_sphere.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_sphere.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.tex" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__list.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__list.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__list.tex" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__list.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__np_array.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__np_array.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__np_array.tex" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__np_array.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/hierarchy.tex" afterPath="$PROJECT_DIR$/latex/hierarchy.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/md__r_e_a_d_m_e.tex" afterPath="$PROJECT_DIR$/latex/md__r_e_a_d_m_e.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/namespace_hannes_o_o_p_project.tex" afterPath="$PROJECT_DIR$/latex/namespace_hannes_o_o_p_project.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.tex" afterPath="$PROJECT_DIR$/latex/refman.tex" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,21 +66,16 @@
       <file leaf-file-name="OOP_npArray.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="316" column="38" lean-forward="false" selection-start-line="316" selection-start-column="38" selection-end-line="316" selection-end-column="38" />
+            <state relative-caret-position="285">
+              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
-                <element signature="e#331#416#0" expanded="false" />
-                <element signature="e#618#729#0" expanded="false" />
-                <element signature="e#835#955#0" expanded="false" />
-                <element signature="e#1858#1977#0" expanded="false" />
-                <element signature="e#2918#3034#0" expanded="false" />
-                <element signature="e#3380#3492#0" expanded="false" />
-                <element signature="e#4150#4262#0" expanded="false" />
-                <element signature="e#4653#4772#0" expanded="false" />
-                <element signature="e#5162#5281#0" expanded="false" />
-                <element signature="e#5658#5688#0" expanded="false" />
-                <element signature="e#6580#6690#0" expanded="false" />
-                <element signature="e#6890#7004#0" expanded="false" />
+                <element signature="e#1803#1923#0" expanded="false" />
+                <element signature="e#4348#4460#0" expanded="false" />
+                <element signature="e#5118#5230#0" expanded="false" />
+                <element signature="e#5621#5740#0" expanded="false" />
+                <element signature="e#6130#6249#0" expanded="false" />
+                <element signature="e#6626#6656#0" expanded="false" />
+                <element signature="e#7858#7972#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -65,7 +110,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -78,10 +123,24 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CourseCompletionProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseCompletionProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -275,15 +334,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.308" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3068182" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25142047" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25142047" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18030183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -308,21 +368,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding>
-            <element signature="e#331#416#0" expanded="false" />
-            <element signature="e#618#729#0" expanded="false" />
-            <element signature="e#835#955#0" expanded="false" />
-            <element signature="e#1858#1977#0" expanded="false" />
-            <element signature="e#2918#3034#0" expanded="false" />
-            <element signature="e#3380#3492#0" expanded="false" />
-            <element signature="e#4150#4262#0" expanded="false" />
-            <element signature="e#4653#4772#0" expanded="false" />
-            <element signature="e#5162#5281#0" expanded="false" />
-            <element signature="e#5658#5688#0" expanded="false" />
-            <element signature="e#6580#6690#0" expanded="false" />
-            <element signature="e#6890#7004#0" expanded="false" />
+            <element signature="e#1803#1923#0" expanded="false" />
+            <element signature="e#4348#4460#0" expanded="false" />
+            <element signature="e#5118#5230#0" expanded="false" />
+            <element signature="e#5621#5740#0" expanded="false" />
+            <element signature="e#6130#6249#0" expanded="false" />
+            <element signature="e#6626#6656#0" expanded="false" />
+            <element signature="e#7858#7972#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -332,18 +387,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#331#416#0" expanded="false" />
-            <element signature="e#618#729#0" expanded="false" />
-            <element signature="e#835#955#0" expanded="false" />
-            <element signature="e#1858#1977#0" expanded="false" />
-            <element signature="e#2918#3034#0" expanded="false" />
-            <element signature="e#3380#3492#0" expanded="false" />
-            <element signature="e#4150#4262#0" expanded="false" />
-            <element signature="e#4653#4772#0" expanded="false" />
-            <element signature="e#5162#5281#0" expanded="false" />
-            <element signature="e#5658#5688#0" expanded="false" />
-            <element signature="e#6580#6690#0" expanded="false" />
-            <element signature="e#6890#7004#0" expanded="false" />
+            <element signature="e#1803#1923#0" expanded="false" />
+            <element signature="e#4348#4460#0" expanded="false" />
+            <element signature="e#5118#5230#0" expanded="false" />
+            <element signature="e#5621#5740#0" expanded="false" />
+            <element signature="e#6130#6249#0" expanded="false" />
+            <element signature="e#6626#6656#0" expanded="false" />
+            <element signature="e#7858#7972#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -353,18 +403,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#331#416#0" expanded="false" />
-            <element signature="e#618#729#0" expanded="false" />
-            <element signature="e#835#955#0" expanded="false" />
-            <element signature="e#1858#1977#0" expanded="false" />
-            <element signature="e#2918#3034#0" expanded="false" />
-            <element signature="e#3380#3492#0" expanded="false" />
-            <element signature="e#4150#4262#0" expanded="false" />
-            <element signature="e#4653#4772#0" expanded="false" />
-            <element signature="e#5162#5281#0" expanded="false" />
-            <element signature="e#5658#5688#0" expanded="false" />
-            <element signature="e#6580#6690#0" expanded="false" />
-            <element signature="e#6890#7004#0" expanded="false" />
+            <element signature="e#1803#1923#0" expanded="false" />
+            <element signature="e#4348#4460#0" expanded="false" />
+            <element signature="e#5118#5230#0" expanded="false" />
+            <element signature="e#5621#5740#0" expanded="false" />
+            <element signature="e#6130#6249#0" expanded="false" />
+            <element signature="e#6626#6656#0" expanded="false" />
+            <element signature="e#7858#7972#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -374,18 +419,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#331#416#0" expanded="false" />
-            <element signature="e#618#729#0" expanded="false" />
-            <element signature="e#835#955#0" expanded="false" />
-            <element signature="e#1858#1977#0" expanded="false" />
-            <element signature="e#2918#3034#0" expanded="false" />
-            <element signature="e#3380#3492#0" expanded="false" />
-            <element signature="e#4150#4262#0" expanded="false" />
-            <element signature="e#4653#4772#0" expanded="false" />
-            <element signature="e#5162#5281#0" expanded="false" />
-            <element signature="e#5658#5688#0" expanded="false" />
-            <element signature="e#6580#6690#0" expanded="false" />
-            <element signature="e#6890#7004#0" expanded="false" />
+            <element signature="e#1803#1923#0" expanded="false" />
+            <element signature="e#4348#4460#0" expanded="false" />
+            <element signature="e#5118#5230#0" expanded="false" />
+            <element signature="e#5621#5740#0" expanded="false" />
+            <element signature="e#6130#6249#0" expanded="false" />
+            <element signature="e#6626#6656#0" expanded="false" />
+            <element signature="e#7858#7972#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -395,18 +435,29 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#331#416#0" expanded="false" />
-            <element signature="e#618#729#0" expanded="false" />
-            <element signature="e#835#955#0" expanded="false" />
-            <element signature="e#1858#1977#0" expanded="false" />
-            <element signature="e#2918#3034#0" expanded="false" />
-            <element signature="e#3380#3492#0" expanded="false" />
-            <element signature="e#4150#4262#0" expanded="false" />
-            <element signature="e#4653#4772#0" expanded="false" />
-            <element signature="e#5162#5281#0" expanded="false" />
-            <element signature="e#5658#5688#0" expanded="false" />
-            <element signature="e#6580#6690#0" expanded="false" />
-            <element signature="e#6890#7004#0" expanded="false" />
+            <element signature="e#1803#1923#0" expanded="false" />
+            <element signature="e#4348#4460#0" expanded="false" />
+            <element signature="e#5118#5230#0" expanded="false" />
+            <element signature="e#5621#5740#0" expanded="false" />
+            <element signature="e#6130#6249#0" expanded="false" />
+            <element signature="e#6626#6656#0" expanded="false" />
+            <element signature="e#7858#7972#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1803#1923#0" expanded="false" />
+            <element signature="e#4348#4460#0" expanded="false" />
+            <element signature="e#5118#5230#0" expanded="false" />
+            <element signature="e#5621#5740#0" expanded="false" />
+            <element signature="e#6130#6249#0" expanded="false" />
+            <element signature="e#6626#6656#0" expanded="false" />
+            <element signature="e#7858#7972#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -426,21 +477,16 @@
     <entry file="file://$PROJECT_DIR$/OOP_dispatch.py" />
     <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="316" column="38" lean-forward="false" selection-start-line="316" selection-start-column="38" selection-end-line="316" selection-end-column="38" />
+        <state relative-caret-position="285">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding>
-            <element signature="e#331#416#0" expanded="false" />
-            <element signature="e#618#729#0" expanded="false" />
-            <element signature="e#835#955#0" expanded="false" />
-            <element signature="e#1858#1977#0" expanded="false" />
-            <element signature="e#2918#3034#0" expanded="false" />
-            <element signature="e#3380#3492#0" expanded="false" />
-            <element signature="e#4150#4262#0" expanded="false" />
-            <element signature="e#4653#4772#0" expanded="false" />
-            <element signature="e#5162#5281#0" expanded="false" />
-            <element signature="e#5658#5688#0" expanded="false" />
-            <element signature="e#6580#6690#0" expanded="false" />
-            <element signature="e#6890#7004#0" expanded="false" />
+            <element signature="e#1803#1923#0" expanded="false" />
+            <element signature="e#4348#4460#0" expanded="false" />
+            <element signature="e#5118#5230#0" expanded="false" />
+            <element signature="e#5621#5740#0" expanded="false" />
+            <element signature="e#6130#6249#0" expanded="false" />
+            <element signature="e#6626#6656#0" expanded="false" />
+            <element signature="e#7858#7972#0" expanded="false" />
           </folding>
         </state>
       </provider>
