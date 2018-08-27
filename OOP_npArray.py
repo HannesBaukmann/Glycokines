@@ -155,7 +155,9 @@ class Well:
     # \param[out] dx, dy, dz The revised next steps
 
     def borderControl(self, coordinates, dx, dy, dz):
-        coordinates = [sum(s) for s in zip(coordinates, (dx, dy, dz))]
+        coordinates[0] = coordinates[0] + dx
+        coordinates[1] = coordinates[1] + dy
+        coordinates[2] = coordinates[2] + dz
         if self.size[0] < abs(coordinates[0]) or 0 > coordinates[0]:
             dx = 0
         if self.size[1] < abs(coordinates[1]) or 0 > coordinates[1]:
@@ -281,7 +283,6 @@ class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität
                     same = True
                     for i in range(len(well.decoderCells[k].coordinates)):
                         same = (well.decoderCells[k].coordinates[i] == well.beads[l].coordinates[i])
-#                        print(same)
                     if same:
 #                    if (well.decoderCells[k].coordinates == well.beads[l].coordinates).all():
                         if random.uniform(0, 10000) <= well.beads[l].glycan_density * well.decoderCells[k].lectin_density:
@@ -322,12 +323,13 @@ class Analysis:
         plt.xticks(indexes, labels)
         plt.show()
 
+
 if __name__ == "__main__":
-    comparison = input("Laufzeitvergleich machen (True/False)? ")
+    comparison = input("Laufzeitvergleich starten (True/False)? ")
     if comparison == "True":
         t_list = []
         t_npArray = []
-        n_range = [5, 10, 50, 100, 500]
+        n_range = [5, 10, 50, 100, 500, 1000, 5000]
         for i in range(len(n_range)):
             n_cells=n_range[i]
             n_beads = 5*n_cells
@@ -345,19 +347,23 @@ if __name__ == "__main__":
             t_npArray.append(time.time() - start_time)
             print(t_npArray)
 
-
-
-#        if isinstance(well.beads, np.ndarray):
-#            print("si")
-#        else:
-#            print("nope")
-#        print(type(well.beads[0].coordinates))
         fig = plt.figure()
-        ax1 = fig.add_subplot(111)
-        ax1.scatter(n_range, t_list, s=10, c='b', marker="s", label='list')
-        ax1.scatter(n_range, t_npArray, s=10, c='r', marker="o", label='npArray')
-        plt.legend(loc='upper left');
+        ax = fig.add_subplot(111)
+        ax.semilogy(n_range, t_list, c='b', marker="s", label='list')
+        ax.semilogy(n_range, t_npArray, c='r', marker="o", label='npArray')
+        plt.legend(loc='upper left')
+        plt.xlabel('Number of Cells / -')
+        plt.ylabel('t / s')
         plt.show()
     else:
-        print("wibe")
+        well_type = input("Welcher Datentyp soll benutzt werden (list/npArray)? ")
+        n_cells = 1
+        n_beads = 5 * n_cells
+        model = Simulation(n_beads, n_cells)  # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x (5x) so viele beads
+        builder = Builder(6, 6, 42)  # Abmessungen des Wells; entspricht 2.5ul bei 1 pt=10 um
+        if well_type == "list":
+            well = model.createModel(builder, Well_list, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77) # alles über input!
+        elif well_type == "npArray":
+            well = model.createModel(builder, Well_npArray, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77)
+        model.simulate(well, 1)  # number of randomWalk steps
 #        auswertung = Analysis().plotCytokines(model.cytokines)
