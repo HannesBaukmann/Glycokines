@@ -1,0 +1,57 @@
+\hypertarget{namespace_course}{}\section{Course Namespace Reference}
+\label{namespace_course}\index{Course@{Course}}
+
+
+Completion Project.  
+
+
+
+
+\subsection{Detailed Description}
+Completion Project. 
+
+This project aims to simulate the binding of immune cells to artificial beads decorated with molecules that induce a biological response of the cells. In nature, immene cells express receptors (so-\/called lectins) binding to carbohydrate structures, or glycans, on the surface of body\textquotesingle{}s own cells or pathogens. Depending on the nature of the glycan ligand, cells express specific cytokines, e. g. the pro-\/inflammatory I\+L-\/6. The idea of the biochemical is to investigate the biological response of a monocytic cell line which recombinantly expresses a defined set of lectin receptors upon binding to glycan ligands that are chemically linked to acrylic glass beads in well-\/defined amounts.
+
+In the following, the translation of real-\/world dimensions for this project will be explained.
+
+Monocytes are 5--20 um in diameter, while beads typically are few um in size. By definition, 1 pt in this program corresponds to 10 um in reality. The (round) basis of a well used in these experiments has an area of 0.\+36 qcm. Here, we consider a quadratic basis, hence $x=y=0.06 cm=600 pt$. Typical volume is 25 ul. Hence, the height of the liquid in a well is \[ h = \frac{25 \mu l}{b} = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m = 420 pt. \] The number of cells usually used in these experiments is 50,000, incubated with a five-\/fold excess of beads. To make calculations feasible, the well dimension are reduced ten-\/fold in every dimension. In order to maintain equal density of particles, the number of cells and beads are consequently reduced to 50 and 250, respectively.
+
+The incubation time of the cells with beads amounts to 30 minutes, or 1800 s. In order to determine to many steps that correlates to, the Stokes-\/\+Einstein equation was utilized\+: \[ x^2 = \frac{k_B \cdot T}{6r \pi \eta} t = \frac{1.381 \cdot 10^{-23} J/K \cdot 298 K}{6 \cdot 5 \mu m \cdot \pi \cdot 0.891 mPa \cdot s} = 9.8 \cdot 10^{-13} \frac{m^2}{s} \cdot t \] At 1 s, a particle of 10 um in aqueous solution would diffuse (ignoring the influence of gravity on sinking particles)\+: \[ \sqrt{x^2} = \sqrt{4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot 1s} = 7 \cdot 10^{-7} m.\] Therefore, a typical experiment of 30 minutes corresponds to $ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m = 126\mbox{ steps}. $
+
+In summary, the values used are\+: \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Parameter  }&\textbf{ Value ({\itshape in vitro})  }&\textbf{ Value ({\itshape in silico})  }&\textbf{ Reduced value   }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Parameter  }&\textbf{ Value ({\itshape in vitro})  }&\textbf{ Value ({\itshape in silico})  }&\textbf{ Reduced value   }\\\cline{1-4}
+\endhead
+Cell size  &5-\/20 um  &1 pt  &---   \\\cline{1-4}
+Bead size  &few um  &1 pt  &---   \\\cline{1-4}
+Well basis  &0.\+36 qcm  &600 pt $\ast$ 600 pt  &60 pt, 60 pt   \\\cline{1-4}
+Volume  &25 ul  &basis $\ast$ 420 pt  &42 pt   \\\cline{1-4}
+Number of cells  &50,000  &50,000  &50   \\\cline{1-4}
+Number of beads  &250,000  &250,000  &250   \\\cline{1-4}
+Incubation time  &30 min  &126 steps  &---   \\\cline{1-4}
+\end{longtabu}
+
+
+The pairs of lectins, glycans, and cytokines implemented in the dictionary (vide infra) now (Aug 31, 2018) are\+:
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Lectin  }&\textbf{ Glycan  }&\textbf{ Glycan type  }&\textbf{ Cytokine  }&\textbf{ Reference   }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Lectin  }&\textbf{ Glycan  }&\textbf{ Glycan type  }&\textbf{ Cytokine  }&\textbf{ Reference   }\\\cline{1-5}
+\endhead
+D\+C-\/\+S\+I\+GN  &Mannan  &Mannose  &I\+L-\/6  &1   \\\cline{1-5}
+D\+C-\/\+S\+I\+GN  &Lewis-\/Y  &Fucose  &I\+L-\/27p28  &1   \\\cline{1-5}
+Dectin-\/1  &Mannan  &Mannose  &I\+L-\/6  &1   \\\cline{1-5}
+\end{longtabu}
+1) Geijtenbeek, T. B. H. and Gringhuis, S. I. (2016) C-\/type lectin receptors in the control of T helper cell differentiation. {\itshape Nat Rev Immunol} 16(7)\+:433. 

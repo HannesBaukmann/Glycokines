@@ -3,7 +3,61 @@
   <component name="ChangeListManager">
     <list default="true" id="c739da01-1cfb-4318-9f11-4eb0ece290a0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/OOP_npArray.py" afterPath="$PROJECT_DIR$/OOP_npArray.py" />
+      <change beforePath="$PROJECT_DIR$/OOP.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/OOP.py.bak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/OOP_npArray.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doxtest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/doxtest.py.bak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/html/annotated.html" afterPath="$PROJECT_DIR$/html/annotated.html" />
+      <change beforePath="$PROJECT_DIR$/html/classes.html" afterPath="$PROJECT_DIR$/html/classes.html" />
+      <change beforePath="$PROJECT_DIR$/html/formula.repository" afterPath="$PROJECT_DIR$/html/formula.repository" />
+      <change beforePath="$PROJECT_DIR$/html/functions.html" afterPath="$PROJECT_DIR$/html/functions.html" />
+      <change beforePath="$PROJECT_DIR$/html/functions_func.html" afterPath="$PROJECT_DIR$/html/functions_func.html" />
+      <change beforePath="$PROJECT_DIR$/html/hierarchy.html" afterPath="$PROJECT_DIR$/html/hierarchy.html" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/html/index.html" />
+      <change beforePath="$PROJECT_DIR$/html/menudata.js" afterPath="$PROJECT_DIR$/html/menudata.js" />
+      <change beforePath="$PROJECT_DIR$/html/namespace_hannes_o_o_p_project.html" afterPath="$PROJECT_DIR$/html/namespace_hannes_o_o_p_project.html" />
+      <change beforePath="$PROJECT_DIR$/html/namespaces.html" afterPath="$PROJECT_DIR$/html/namespaces.html" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_0.js" afterPath="$PROJECT_DIR$/html/search/all_0.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_1.js" afterPath="$PROJECT_DIR$/html/search/all_1.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_2.js" afterPath="$PROJECT_DIR$/html/search/all_2.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_3.js" afterPath="$PROJECT_DIR$/html/search/all_3.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_4.js" afterPath="$PROJECT_DIR$/html/search/all_4.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_5.js" afterPath="$PROJECT_DIR$/html/search/all_5.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_6.js" afterPath="$PROJECT_DIR$/html/search/all_6.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_7.js" afterPath="$PROJECT_DIR$/html/search/all_7.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_8.js" afterPath="$PROJECT_DIR$/html/search/all_8.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_9.js" afterPath="$PROJECT_DIR$/html/search/all_9.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_0.js" afterPath="$PROJECT_DIR$/html/search/classes_0.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_1.js" afterPath="$PROJECT_DIR$/html/search/classes_1.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_2.js" afterPath="$PROJECT_DIR$/html/search/classes_2.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_3.js" afterPath="$PROJECT_DIR$/html/search/classes_3.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_4.js" afterPath="$PROJECT_DIR$/html/search/classes_4.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_5.js" afterPath="$PROJECT_DIR$/html/search/classes_5.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_6.js" afterPath="$PROJECT_DIR$/html/search/classes_6.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_7.js" afterPath="$PROJECT_DIR$/html/search/classes_7.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_0.js" afterPath="$PROJECT_DIR$/html/search/functions_0.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_1.js" afterPath="$PROJECT_DIR$/html/search/functions_1.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_2.js" afterPath="$PROJECT_DIR$/html/search/functions_2.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/namespaces_0.js" afterPath="$PROJECT_DIR$/html/search/namespaces_0.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/pages_0.js" afterPath="$PROJECT_DIR$/html/search/pages_0.js" />
+      <change beforePath="$PROJECT_DIR$/html/search/search.css" afterPath="$PROJECT_DIR$/html/search/search.css" />
+      <change beforePath="$PROJECT_DIR$/html/search/searchdata.js" afterPath="$PROJECT_DIR$/html/search/searchdata.js" />
+      <change beforePath="$PROJECT_DIR$/latex/annotated.tex" afterPath="$PROJECT_DIR$/latex/annotated.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_bead.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p_1_1_bead.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_decoder_cell.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p_1_1_decoder_cell.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p_1_1_sphere.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p_1_1_sphere.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_bead.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_bead.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_decoder_cell.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_sphere.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_sphere.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__list.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__list.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__np_array.pdf" afterPath="$PROJECT_DIR$/latex/class_o_o_p__np_array_1_1_well__np_array.pdf" />
+      <change beforePath="$PROJECT_DIR$/latex/hierarchy.tex" afterPath="$PROJECT_DIR$/latex/hierarchy.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/namespace_hannes_o_o_p_project.tex" afterPath="$PROJECT_DIR$/latex/namespace_hannes_o_o_p_project.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/namespaces.tex" afterPath="$PROJECT_DIR$/latex/namespaces.tex" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.tex" afterPath="$PROJECT_DIR$/latex/refman.tex" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,26 +68,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OOP_npArray.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
+      <file leaf-file-name="CCP_Hannes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CCP_Hannes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3945">
-              <caret line="342" column="17" lean-forward="false" selection-start-line="342" selection-start-column="17" selection-end-line="342" selection-end-column="17" />
+            <state relative-caret-position="260">
+              <caret line="345" column="26" lean-forward="true" selection-start-line="345" selection-start-column="26" selection-end-line="345" selection-end-column="26" />
               <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="e#1299#1384#0" expanded="false" />
-                <element signature="e#1586#1697#0" expanded="false" />
-                <element signature="e#1803#1923#0" expanded="false" />
-                <element signature="e#2826#2945#0" expanded="false" />
-                <element signature="e#3886#4002#0" expanded="false" />
-                <element signature="e#4348#4460#0" expanded="false" />
-                <element signature="e#5118#5230#0" expanded="false" />
-                <element signature="e#5621#5740#0" expanded="false" />
-                <element signature="e#6130#6249#0" expanded="false" />
-                <element signature="e#6626#6656#0" expanded="false" />
-                <element signature="e#7612#7722#0" expanded="false" />
-                <element signature="e#7922#8036#0" expanded="false" />
-                <element signature="e#12174#12232#0" expanded="false" />
+                <element signature="e#3764#3811#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,6 +88,8 @@
       <find>np.empty</find>
       <find>well</find>
       <find>print</find>
+      <find>sys</find>
+      <find>glycan_names_list</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -65,17 +108,17 @@
         <option value="$PROJECT_DIR$/OOP.py" />
         <option value="$PROJECT_DIR$/OOP_dispatch.py" />
         <option value="$PROJECT_DIR$/OOP_npArray.py" />
+        <option value="$PROJECT_DIR$/CCP_Hannes.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="777" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="636" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -88,21 +131,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CourseCompletionProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseCompletionProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -124,7 +153,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.OOP_npArray">
+  <component name="RunManager" selected="Python.CCP_Hannes">
     <configuration name="2DTurtles" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,6 +167,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CourseCompletionProject" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2DTurtles.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="CCP_Hannes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CourseCompletionProject" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CCP_Hannes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -251,7 +298,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="7">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Python.awesome3D" />
       <item index="1" class="java.lang.String" itemvalue="Python.simple3D" />
       <item index="2" class="java.lang.String" itemvalue="Python.2DTurtles" />
@@ -259,12 +306,14 @@
       <item index="4" class="java.lang.String" itemvalue="Python.vorlagen" />
       <item index="5" class="java.lang.String" itemvalue="Python.OOP_npArray" />
       <item index="6" class="java.lang.String" itemvalue="Python.OOP_dispatch" />
+      <item index="7" class="java.lang.String" itemvalue="Python.CCP_Hannes" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.OOP_npArray" />
-        <item index="1" class="java.lang.String" itemvalue="Python.OOP_dispatch" />
-        <item index="2" class="java.lang.String" itemvalue="Python.vorlagen" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.CCP_Hannes" />
+        <item index="1" class="java.lang.String" itemvalue="Python.OOP_npArray" />
+        <item index="2" class="java.lang.String" itemvalue="Python.OOP_dispatch" />
+        <item index="3" class="java.lang.String" itemvalue="Python.vorlagen" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +347,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -326,7 +375,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -335,22 +384,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -358,22 +392,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -381,22 +408,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -404,22 +416,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -427,22 +424,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -450,22 +432,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -473,22 +440,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -496,22 +448,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -530,23 +467,18 @@
     <entry file="file://$PROJECT_DIR$/OOP_dispatch.py" />
     <entry file="file://$PROJECT_DIR$/OOP_npArray.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3945">
-          <caret line="342" column="17" lean-forward="false" selection-start-line="342" selection-start-column="17" selection-end-line="342" selection-end-column="17" />
+        <state relative-caret-position="330">
+          <caret line="22" column="128" lean-forward="false" selection-start-line="22" selection-start-column="128" selection-end-line="22" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CCP_Hannes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="345" column="26" lean-forward="true" selection-start-line="345" selection-start-column="26" selection-end-line="345" selection-end-column="26" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#1299#1384#0" expanded="false" />
-            <element signature="e#1586#1697#0" expanded="false" />
-            <element signature="e#1803#1923#0" expanded="false" />
-            <element signature="e#2826#2945#0" expanded="false" />
-            <element signature="e#3886#4002#0" expanded="false" />
-            <element signature="e#4348#4460#0" expanded="false" />
-            <element signature="e#5118#5230#0" expanded="false" />
-            <element signature="e#5621#5740#0" expanded="false" />
-            <element signature="e#6130#6249#0" expanded="false" />
-            <element signature="e#6626#6656#0" expanded="false" />
-            <element signature="e#7612#7722#0" expanded="false" />
-            <element signature="e#7922#8036#0" expanded="false" />
-            <element signature="e#12174#12232#0" expanded="false" />
+            <element signature="e#3764#3811#0" expanded="true" />
           </folding>
         </state>
       </provider>

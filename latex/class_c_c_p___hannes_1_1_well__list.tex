@@ -1,0 +1,68 @@
+\hypertarget{class_c_c_p___hannes_1_1_well__list}{}\section{C\+C\+P\+\_\+\+Hannes.\+Well\+\_\+list Class Reference}
+\label{class_c_c_p___hannes_1_1_well__list}\index{C\+C\+P\+\_\+\+Hannes.\+Well\+\_\+list@{C\+C\+P\+\_\+\+Hannes.\+Well\+\_\+list}}
+
+
+Subclass of \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} using built-\/in python lists as containers for objects of the classes \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}.  
+
+
+Inheritance diagram for C\+C\+P\+\_\+\+Hannes.\+Well\+\_\+list\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_c_c_p___hannes_1_1_well__list}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_a933f4992003c4596f01e5d6eb073dd98}\label{class_c_c_p___hannes_1_1_well__list_a933f4992003c4596f01e5d6eb073dd98}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, x, y, z, n\+\_\+beads, n\+\_\+cells)
+\item 
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_well__list_ae4a512caba0dd7137b6ad4196cf72c1d}{add\+Bead}} (self, i, bead, glyan\+\_\+name\+\_\+string, glycan\+\_\+type\+\_\+string, density\+\_\+percentage)
+\begin{DoxyCompactList}\small\item\em Method to add objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} to the bead list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_a5c1b28836c28ddea4d2cc808f4d1d266}\label{class_c_c_p___hannes_1_1_well__list_a5c1b28836c28ddea4d2cc808f4d1d266}} 
+def {\bfseries add\+Decoder\+Cell} (self, i, decoder\+Cell, lectin\+\_\+name\+\_\+string, lectin\+\_\+type\+\_\+string)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_a676c83197aea581b7a130d3e126bdca8}\label{class_c_c_p___hannes_1_1_well__list_a676c83197aea581b7a130d3e126bdca8}} 
+{\bfseries size}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_a98e8a5739d0543e714fb0328d1ebeee9}\label{class_c_c_p___hannes_1_1_well__list_a98e8a5739d0543e714fb0328d1ebeee9}} 
+{\bfseries beads}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_a2565b636a8563902152fbca021c0b84e}\label{class_c_c_p___hannes_1_1_well__list_a2565b636a8563902152fbca021c0b84e}} 
+{\bfseries decoder\+Cells}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Subclass of \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} using built-\/in python lists as containers for objects of the classes \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_ae4a512caba0dd7137b6ad4196cf72c1d}\label{class_c_c_p___hannes_1_1_well__list_ae4a512caba0dd7137b6ad4196cf72c1d}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Well\+\_\+list@{C\+C\+P\+\_\+\+Hannes\+::\+Well\+\_\+list}!add\+Bead@{add\+Bead}}
+\index{add\+Bead@{add\+Bead}!C\+C\+P\+\_\+\+Hannes\+::\+Well\+\_\+list@{C\+C\+P\+\_\+\+Hannes\+::\+Well\+\_\+list}}
+\subsubsection{\texorpdfstring{add\+Bead()}{addBead()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Well\+\_\+list.\+add\+Bead (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i,  }\item[{}]{bead,  }\item[{}]{glyan\+\_\+name\+\_\+string,  }\item[{}]{glycan\+\_\+type\+\_\+string,  }\item[{}]{density\+\_\+percentage }\end{DoxyParamCaption})}
+
+
+
+Method to add objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} to the bead list. 
+
+Coordinates of the \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} are randomly chosen between 0 and size of the \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} in the respective dimension.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & Not used here, but neccessary for convenient switching between container types. \\
+\hline
+\mbox{\tt in}  & {\em bead} & Object of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} to be added. \\
+\hline
+\mbox{\tt in}  & {\em } & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+C\+P\+\_\+\+Hannes.\+py\end{DoxyCompactItemize}

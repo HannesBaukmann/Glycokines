@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hannesoopproject',['HannesOOPProject',['../namespace_hannes_o_o_p_project.html',1,'']]]
+  ['lectin',['Lectin',['../class_c_c_p___hannes_1_1_lectin.html',1,'CCP_Hannes']]]
 ];

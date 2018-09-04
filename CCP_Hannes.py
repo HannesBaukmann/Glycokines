@@ -1,35 +1,61 @@
-## Description of this project.
+## @package Cytokines Hannes Baukmann's Course Completion Project
 #
-# Ueberschift!
-# ============
+# This project aims to simulate the binding of immune cells to artificial beads decorated with molecules that induce a
+# biological response of the cells. In nature, immene cells express receptors (so-called lectins) binding to
+# carbohydrate structures, or glycans, on the surface of body's own cells or pathogens. Depending on the nature of the
+# glycan ligand, cells express specific cytokines, e. g. the pro-inflammatory IL-6. The idea of the biochemical
+# is to investigate the biological response of a monocytic cell line which recombinantly expresses a defined set of
+# lectin receptors upon binding to glycan ligands that are chemically linked to acrylic glass beads in well-defined
+# amounts.
 #
-# @package HannesOOPProject
-# THP-1 cells are about 15 um in diameter, while beads typically are few um in size. Therefore, 1 pt in this program
-# corresponds to 10 um in reality.
-# Size of well:
-# The (round) basis of a well has an area of 0.36 cm2. Here, we consider a quadratic basis, hence x=y=0.06 cm2. With
-# 1pt = 10 um, x=y=600pt
-# Typical volume is 25 ul. Hence, the height of the liquid in a well is \f$ 25 \mu l = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m =
-# 420 pt \f$.
-# Typical experiment takes 30 minutes or 1800 s. How many steps does that correlate to? How fast does a particle of 10 um / 1 pt in diameter diffuse?
-# Stokes-Einstein equation:
-# \f$ x^2 = \frac{k_B \cdot T}{3r \pi \eta} t = 4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot t \f$
-# (D_H_2O (25°C) = 0.891 mPa \cdot s)
-# At 1 s, the medium ... is 7 \cdot 10^{-7} m^2.
-# Therefore, a typical experiment of 30 minutes corresponds to \f$ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m \f$, or 126 steps.
-# 25 grad
+# In the following, the conversion of real-world dimensions for this project will be explained.
+#
+# Monocytes are 5--20 um in diameter, while beads typically are few um in size.
+# By definition, 1 pt in this program corresponds to 10 um in reality.
+# The (round) basis of a well used in these experiments has an area of 0.36 qcm. Here, we consider a quadratic basis, hence
+# \f$x=y=0.06 cm=600 pt\f$.
+# Typical volume is 25 ul. Hence, the height of the liquid in a well is
+# \f[ h = \frac{25 \mu l}{b} = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m = 420 pt. \f]
+# The number of cells usually used in these experiments is 50,000, incubated with a five-fold excess of beads.
+# To make calculations feasible, the well dimension are reduced ten-fold in every dimension. In
+# order to maintain equal density of particles, the number of cells and beads are consequently reduced to 50 and 250,
+# respectively.
+#
+# The incubation time of the cells with beads amounts to 30 minutes, or 1800 s. In order to determine to many steps that
+# correlates to, the Stokes-Einstein equation was utilized:
+# \f[ x^2 = \frac{k_B \cdot T}{6r \pi \eta} t = \frac{1.381 \cdot 10^{-23} J/K \cdot 298 K}{6 \cdot 5 \mu m \cdot \pi \cdot 0.891 mPa \cdot s} = 9.8 \cdot 10^{-13} \frac{m^2}{s} \cdot t \f]
+# At 1 s, a particle of 10 um in aqueous solution would diffuse (ignoring the influence of gravity on sinking particles):
+# \f[ \sqrt{x^2} = \sqrt{4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot 1s} = 7 \cdot 10^{-7} m.\f]
+# Therefore, a typical experiment of 30 minutes corresponds to
+# \f$ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m = 126\mbox{ steps}. \f$
+#
+# In summary, the values used are:
+# | Parameter       | Value (*in vitro*) | Value (*in silico*) | Reduced value |
+# | :-------------- | :----------------- | :------------------ | :------------ |
+# | Cell size       | 5-20 um            | 1 pt                | ---           |
+# | Bead size       | few um             | 1 pt                | ---           |
+# | Well basis      | 0.36 qcm           | 600 pt * 600 pt     | 60 pt, 60 pt  |
+# | Volume          | 25 ul              | basis * 420 pt      | 42 pt         |
+# | Number of cells | 50,000             | 50,000              | 50            |
+# | Number of beads | 250,000            | 250,000             | 250           |
+# | Incubation time | 30 min             | 126 steps           | ---           |
+#
+# The pairs of lectins, glycans, and cytokines implemented in the dictionary (vide infra) now (Aug 31, 2018) are:
+#
+# | Lectin   | Glycan  | Glycan type | Cytokine | Reference |
+# | :------- | :------ | :---------- | :------- | :-------  |
+# | DC-SIGN  | Mannan  | Mannose     | IL-6     | 1         |
+# | DC-SIGN  | Lewis-Y | Fucose      | IL-27p28 | 1         |
+# | Dectin-1 | Mannan  | Mannose     | IL-6     | 1         |
+# 1) Geijtenbeek, T. B. H. and Gringhuis, S. I. (2016) C-type lectin receptors in the control of T helper cell differentiation. *Nat Rev Immunol* 16(7):433.
 
-import random
-from collections import Counter # um Elemente in cytokines zu zählen
-import matplotlib.pyplot as plt; plt.rcdefaults()
-import numpy as np
-import matplotlib.pyplot as plt # für Plot
-import sys
-import time
-import operator
+import random                   # random number
+import numpy as np              # numpy arrays
+import matplotlib.pyplot as plt # for plotting
+import sys                      # system exit
+import time                     # runtime meaurement
 
-
-## \brief Sphere serves as superclass for the two spherical objects indroduced below.
+## Sphere serves as superclass for the two spherical objects indroduced below.
 #
 # \param[in] ID Identifier
 # \param coordinates Empty. Will be filled when added to Well.
@@ -39,7 +65,7 @@ class Sphere:
         self.ID = ID_string
         self.coordinates = []
 
-## \brief Bead is a subclass of Sphere and represents beads (made of PMMA, or acrylic glass) loaded with glycan
+## Bead is a subclass of Sphere and represents beads (made of acrylic glass) loaded with glycan
 # structures.
 #
 
@@ -85,13 +111,6 @@ class Glycan:
 
 ## \brief DecoderCell is a subclass of Sphere and represents immune cells (such as THP-1 cells) that express Lectins
 # which bind to Glycan structures and engage in immune response by secreting cytokines.
-#
-# | Right | Center | Left  |
-# | ----: | :----: | :---- |
-# | 10    | 10     |    10 |
-# | 1000  |   1000 |  1000 |
-#
-# \f$ \sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \f$
 
 class DecoderCell(Sphere):
     def __init__(self, *args):
@@ -227,7 +246,6 @@ class Builder:
     def buildDecoderCell(self, i, ID, lectin_name_string, density_percentage):
         self.well.addDecoderCell(i, DecoderCell(ID), lectin_name_string, density_percentage)
 
-## Dictionary is based on Geijtenbeek & Gringhuis C-type lectin receptors in the control of T helper cell differentiation Nature Reviews Immunology volume 16, pages 433–448 (2016)
 class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität und Cytokinexpression
     def __init__(self, numberOfBeads, numberOfDecoderCells):
         self.n_beads = numberOfBeads
@@ -292,27 +310,28 @@ class Simulation: ## enthält (sehr simples) Dictionary für Bindungsspezifität
 
 
 class Analysis:
-    def __init__(self):
-        pass
+    def __init__(self, simulationResults, cytokine_names=None):
+        self.results = simulationResults
+        if cytokine_names is None:
+            c = []
+            for i in range(len(simulationResults)):
+                c.append(simulationResults[i].name)
+            self.cytokineNames = list(set(c))
+        else:
+            self.cytokineNames=cytokine_names
 
-    def countCytokines(self, simulationResults):
+    def countCytokines(self):
         self.cytokineAmount = []
-        names = []
-        for i in range(len(simulationResults)):
-            names.append(simulationResults[i].name)
-        self.cytokineNames = list(set(names))
         for i in range(len(self.cytokineNames)):
             counter = 0
-            for j in range(len(simulationResults)):
-                if self.cytokineNames[i] == simulationResults[j].name:
+            for j in range(len(self.results)):
+                if self.cytokineNames[i] == self.results[j].name:
                     counter += 1
             self.cytokineAmount.append(counter)
-        print(self.cytokineNames)
-        print(self.cytokineAmount)
+        return [self.cytokineNames, self.cytokineAmount]
 
-
-    def plotCytokines(self, simulationResults):
-        self.countCytokines(simulationResults)
+    def plotCytokines(self):
+        self.countCytokines()
         labels = self.cytokineNames
         values = self.cytokineAmount
 
@@ -325,45 +344,120 @@ class Analysis:
 
 
 if __name__ == "__main__":
-    comparison = input("Laufzeitvergleich starten (True/False)? ")
-    if comparison == "True":
+    dependant = input("Show dependency of overall cytokine expression on (Lectins/Ratio_Cells_Beads/Density_Glycans/Runtime) ")
+    if dependant == "Lectins":
+        results = []
+        lectins = [["DC-SIGN"], ["Dectin-1"], ["DC-SIGN", "Dectin-1"]]
+        glycans = ["Mannan", "Lewis-Y"]
+        glycans_types = ["Man", "Fuc"]
+        cytokines = ["IL-6", "IL-27p28"]
+        builder = Builder(60, 60, 42)
+        for i in range(len(lectins)):
+            model = Simulation(250, 50)
+            well = model.createModel(builder, Well_list, glycans, glycans_types, 50, lectins[i], 50)
+            model.simulate(well, 126) #number of randomWalk steps
+            results.append(Analysis(model.cytokines, cytokines).countCytokines())
+
+        plt.figure(1)
+
+        p1 = plt.subplot(131)
+        labels = cytokines
+        values = results[0][1]
+        indexes = np.arange(len(labels))
+        plt.bar(indexes, values)
+        plt.xticks(indexes, labels)
+        plt.title(lectins[0])
+        plt.ylabel("Cytokines Produced")
+
+        p2 = plt.subplot(132, sharey=p1) # gleiche y achse wie erster subplot
+        values = results[1][1]
+        plt.bar(indexes, values)
+        plt.xticks(indexes, labels)
+        plt.title(lectins[1])
+        plt.setp(p2.get_yticklabels(), visible=False) # y ticks wie oben festgelegt, keine beschrifttúng
+
+        p3 = plt.subplot(133, sharey=p1) # gleiche y achse wie oben festgelegt
+        values = results[2][1]
+        plt.bar(indexes, values)
+        plt.xticks(indexes, labels)
+        plt.title(lectins[2])
+        plt.setp(p3.get_yticklabels(), visible=False) # y ticks wie oben festgelegt, keine beschrifttúng
+
+        plt.show()
+
+
+    elif dependant == "Ratio_Cells_Beads":
+        lectins = ["DC-SIGN", "Dectin-1"]
+        glycans = ["Mannan", "Lewis-Y"]
+        glycans_types = ["Man", "Fuc"]
+        c = []
+        r_range = [0.1, 0.25, 0.5, 1, 2.5, 5, 10, 25]
+        builder = Builder(60, 60, 42)
+        n_total = 300
+        for i in range(len(r_range)):
+            n_cells = int(300/(r_range[i]+1)) # rundet auf ganze Zahl
+            n_beads = n_total-n_cells
+            model = Simulation(n_beads, n_cells) # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x (5x) so viele beads
+            well = model.createModel(builder, Well_list, glycans, glycans_types, 50, lectins, 50)
+            model.simulate(well, 126) #number of randomWalk steps
+            c.append(len(model.cytokines))
+
+        fig = plt.figure()
+        plt.scatter(r_range, c, c='b', marker="s")
+        plt.ylim(ymin=0)  # adjust the min leaving max unchanged
+        plt.xlabel('Cell-to-Bead Ratio')
+        plt.ylabel('Total Amount of Cytokines')
+        plt.show()
+
+
+    elif dependant == "Density_Glycans":
+        lectins = ["DC-SIGN", "Dectin-1"]
+        glycans = ["Mannan", "Lewis-Y"]
+        glycans_types = ["Man", "Fuc"]
+        c = []
+        DG_range = [10, 25, 50, 75, 100]
+        builder = Builder(60, 60, 42)
+        model = Simulation(250, 50)
+        for i in range(len(DG_range)):
+            well = model.createModel(builder, Well_list, glycans, glycans_types, i, lectins, 50)
+            model.simulate(well, 126) #number of randomWalk steps
+            c.append(len(model.cytokines))
+
+        fig = plt.figure()
+        plt.scatter(DG_range, c, c='b', marker="s")
+        plt.xlabel('Cell-to-Bead Ratio')
+        plt.ylabel('Total Amount of Cytokines')
+        plt.show()
+
+
+    elif dependant == "Runtime":
+        lectins = ["DC-SIGN", "Dectin-1"]
+        glycans = ["Mannan", "Lewis-Y"]
+        glycans_types = ["Man", "Fuc"]
         t_list = []
         t_npArray = []
-        n_range = [5, 10, 50, 100, 500, 1000, 5000]
+        n_range = [1, 5, 10, 25, 50, 100, 250, 500]
         for i in range(len(n_range)):
             n_cells=n_range[i]
             n_beads = 5*n_cells
             n_total = n_cells + n_beads
             model = Simulation(n_beads, n_cells)  # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x (5x) so viele beads
-            builder = Builder(6, 6, 42)  # Abmessungen des Wells; entspricht 2.5ul bei 1 pt=10 um
+            builder = Builder(60, 60, 42)  # Abmessungen des Wells; entspricht 2.5ul bei 1 pt=10 um
             start_time = time.time()
-            well = model.createModel(builder, Well_list, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77)
+            well = model.createModel(builder, Well_list, glycans, glycans_types, 50, lectins, 50)
             model.simulate(well, 1) #number of randomWalk steps
             t_list.append(time.time() - start_time)
-            print(t_list)
             start_time = time.time()
-            well = model.createModel(builder, Well_npArray, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77)
+            well = model.createModel(builder, Well_npArray, glycans, glycans_types, 50, lectins, 50)
             model.simulate(well, 1) #number of randomWalk steps
             t_npArray.append(time.time() - start_time)
-            print(t_npArray)
 
         fig = plt.figure()
-        ax = fig.add_subplot(111)
-        ax.semilogy(n_range, t_list, c='b', marker="s", label='list')
-        ax.semilogy(n_range, t_npArray, c='r', marker="o", label='npArray')
+        plt.semilogy(n_range, t_list, c='b', marker="s", label='list')
+        plt.semilogy(n_range, t_npArray, c='r', marker="o", label='npArray')
         plt.legend(loc='upper left')
-        plt.xlabel('Number of Cells / -')
-        plt.ylabel('t / s')
+        plt.xlabel('Number of Cells')
+        plt.ylabel('Runtime / s')
         plt.show()
     else:
-        well_type = input("Welcher Datentyp soll benutzt werden (list/npArray)? ")
-        n_cells = 1
-        n_beads = 5 * n_cells
-        model = Simulation(n_beads, n_cells)  # number of beads an cells, realistisch 50.000 (oder nur 10.000 wegen Sedimentation); 1-10x (5x) so viele beads
-        builder = Builder(6, 6, 42)  # Abmessungen des Wells; entspricht 2.5ul bei 1 pt=10 um
-        if well_type == "list":
-            well = model.createModel(builder, Well_list, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77) # alles über input!
-        elif well_type == "npArray":
-            well = model.createModel(builder, Well_npArray, ["Mannan", "Lewis-X"], ["Man", "Fuc"], 100, ["DC-SIGN"], 77)
-        model.simulate(well, 1)  # number of randomWalk steps
-#        auswertung = Analysis().plotCytokines(model.cytokines)
+        exit("Could not interpret key input. Input must be exactly as specified in the brackets in the promt statement.")
