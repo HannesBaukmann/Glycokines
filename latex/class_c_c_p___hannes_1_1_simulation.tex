@@ -2,6 +2,109 @@
 \label{class_c_c_p___hannes_1_1_simulation}\index{C\+C\+P\+\_\+\+Hannes.\+Simulation@{C\+C\+P\+\_\+\+Hannes.\+Simulation}}
 
 
+\mbox{\hyperlink{class_c_c_p___hannes_1_1_simulation}{Simulation}} contains methods to create the model by calling methods of call \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder}{Builder}}, and to run simulations.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_simulation_acce948d84267e7ebb00ac64022f5b4a1}\label{class_c_c_p___hannes_1_1_simulation_acce948d84267e7ebb00ac64022f5b4a1}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, number\+Of\+Beads, number\+Of\+Decoder\+Cells)
+\item 
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_simulation_a9c38e62adf0444d0e97d068f2ee0daad}{create\+Model}} (self, builder, container\+\_\+type, glycan\+\_\+names\+\_\+list, glycan\+\_\+types\+\_\+list, glycan\+\_\+density, lectin\+\_\+list, lectin\+\_\+density)
+\begin{DoxyCompactList}\small\item\em At the beginning, it is ensured that the dictionary contains all entered glycan and lectin types. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_simulation_afa30032fef44f31161729fd781961893}{simulate}} (self, well, steps)
+\begin{DoxyCompactList}\small\item\em The simulation itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_simulation_a24a7d1ddd0acbf6cc8686fc05b6068a9}\label{class_c_c_p___hannes_1_1_simulation_a24a7d1ddd0acbf6cc8686fc05b6068a9}} 
+{\bfseries n\+\_\+beads}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_simulation_a42c095973fd5cff0689152f62a5096a1}\label{class_c_c_p___hannes_1_1_simulation_a42c095973fd5cff0689152f62a5096a1}} 
+{\bfseries n\+\_\+decoder}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_simulation_a846800d73dd67261dc155832943b42c0}\label{class_c_c_p___hannes_1_1_simulation_a846800d73dd67261dc155832943b42c0}} 
+{\bfseries cytokines}
+\item 
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_simulation_ad856ba286b2470e8df0fa997b57ef461}\label{class_c_c_p___hannes_1_1_simulation_ad856ba286b2470e8df0fa997b57ef461}} 
+{\bfseries cytokine\+\_\+dict}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_c_c_p___hannes_1_1_simulation}{Simulation}} contains methods to create the model by calling methods of call \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder}{Builder}}, and to run simulations. 
+
+It contains the dictionary for binding specificity and cytokine expression.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em number\+Of\+Beads} & Number of objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} to be created \\
+\hline
+\mbox{\tt in}  & {\em number\+Of\+Decoder\+Cells} & Number of to be created \\
+\hline
+ & {\em cytokines} & List containing of objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_cytokine}{Cytokine}} \\
+\hline
+ & {\em cytokine\+\_\+dict} & Dictionary for binding specificity and cytokine expression \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_simulation_a9c38e62adf0444d0e97d068f2ee0daad}\label{class_c_c_p___hannes_1_1_simulation_a9c38e62adf0444d0e97d068f2ee0daad}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Simulation@{C\+C\+P\+\_\+\+Hannes\+::\+Simulation}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!C\+C\+P\+\_\+\+Hannes\+::\+Simulation@{C\+C\+P\+\_\+\+Hannes\+::\+Simulation}}
+\subsubsection{\texorpdfstring{create\+Model()}{createModel()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Simulation.\+create\+Model (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{builder,  }\item[{}]{container\+\_\+type,  }\item[{}]{glycan\+\_\+names\+\_\+list,  }\item[{}]{glycan\+\_\+types\+\_\+list,  }\item[{}]{glycan\+\_\+density,  }\item[{}]{lectin\+\_\+list,  }\item[{}]{lectin\+\_\+density }\end{DoxyParamCaption})}
+
+
+
+At the beginning, it is ensured that the dictionary contains all entered glycan and lectin types. 
+
+Then, the builder is directed to create one object of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} and instances of the classes \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em builder} & Object of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder}{Builder}} \\
+\hline
+\mbox{\tt in}  & {\em container\+\_\+type} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder}{Builder}} \\
+\hline
+\mbox{\tt in}  & {\em glycan\+\_\+names\+\_\+list} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\mbox{\tt in}  & {\em glycan\+\_\+types\+\_\+list} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\mbox{\tt in}  & {\em glycan\+\_\+density} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\mbox{\tt in}  & {\em lectin\+\_\+list} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_lectin}{Lectin}} \\
+\hline
+\mbox{\tt in}  & {\em lectin\+\_\+density} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_lectin}{Lectin}} \\
+\hline
+\mbox{\tt out}  & {\em builder.\+well} & Object of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} created by \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder}{Builder}}, containing objects of classes \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_simulation_afa30032fef44f31161729fd781961893}\label{class_c_c_p___hannes_1_1_simulation_afa30032fef44f31161729fd781961893}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Simulation@{C\+C\+P\+\_\+\+Hannes\+::\+Simulation}!simulate@{simulate}}
+\index{simulate@{simulate}!C\+C\+P\+\_\+\+Hannes\+::\+Simulation@{C\+C\+P\+\_\+\+Hannes\+::\+Simulation}}
+\subsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Simulation.\+simulate (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{well,  }\item[{}]{steps }\end{DoxyParamCaption})}
+
+
+
+The simulation itself. 
+
+First, all Beads and all Decoder\+Cells move once. Then, for every \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} it is tested if there\textquotesingle{}s a \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} at the same position (Beads can be bound by different Cells successively). If this is true and the mutiplied densities exceed a random number, the cytokine dictionary is inquired. If the \mbox{\hyperlink{class_c_c_p___hannes_1_1_lectin}{Lectin}} on the \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} and the \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} on the \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} match, the a object of the class \mbox{\hyperlink{class_c_c_p___hannes_1_1_cytokine}{Cytokine}} of the respective type is produced and stored in the self.\+cytokines list.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em well} & Object of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} produced by method create\+Model \\
+\hline
+\mbox{\tt in}  & {\em steps} & Number of steps \\
+\hline
+\mbox{\tt out}  & {\em cytokines} & List containing objects of type \mbox{\hyperlink{class_c_c_p___hannes_1_1_cytokine}{Cytokine}} and the coordinates of production \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 C\+C\+P\+\_\+\+Hannes.\+py\end{DoxyCompactItemize}

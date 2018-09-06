@@ -18,13 +18,13 @@ Inheritance diagram for C\+C\+P\+\_\+\+Hannes.\+Well\+:\begin{figure}[H]
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, x, y, z)
 \item 
 def \mbox{\hyperlink{class_c_c_p___hannes_1_1_well_ae595041538a36438fa0ff796a1e24d4c}{border\+Control}} (self, coordinates, dx, dy, dz)
-\begin{DoxyCompactList}\small\item\em The method border\+Control ensures that objects\textquotesingle{} coordinates don\textquotesingle{}t exceed the well\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The method border\+Control ensures that objects\textquotesingle{} coordinates don\textquotesingle{}t exceed the \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}}\textquotesingle{}s size. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 The class \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} describes the sample, in which binding events take place. 
 
-It serves a a superclass for two subclasses of which one uses Num\+Py Arrays as a container for onjects of the classes \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} while the other one uses built-\/in Python lists for this purpose.
+It serves a a superclass for two subclasses of which one uses Num\+Py Arrays as a container for objects of the classes \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} while the other one uses built-\/in Python lists for this purpose.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -42,9 +42,10 @@ It serves a a superclass for two subclasses of which one uses Num\+Py Arrays as 
 
 
 
-The method border\+Control ensures that objects\textquotesingle{} coordinates don\textquotesingle{}t exceed the well\textquotesingle{}s size. 
+The method border\+Control ensures that objects\textquotesingle{} coordinates don\textquotesingle{}t exceed the \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}}\textquotesingle{}s size. 
 
-If a step in random\+Walk would lead to a forbidden value, the respective step value will be set to 0 and the object won\textquotesingle{}t move this turn as if repelled from the well\textquotesingle{}s borders.
+If a step in {\ttfamily random\+Walk} would lead to a forbidden value, the sign of the respective step value will be reversed so the object \char`\"{}bounces
+ back\char`\"{} from the \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}}\textquotesingle{}s borders.
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -52,7 +53,7 @@ If a step in random\+Walk would lead to a forbidden value, the respective step v
 \hline
 \mbox{\tt in}  & {\em dx,dy,dz} & The randomly chosen next steps. \\
 \hline
-\mbox{\tt out}  & {\em dx,dy,dz} & The revised next steps \\
+\mbox{\tt out}  & {\em dx,dy,dz} & The revised next steps. \\
 \hline
 \end{DoxyParams}
 

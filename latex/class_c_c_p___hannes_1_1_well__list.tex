@@ -19,9 +19,8 @@ def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, x, y, z, n\+\_\+beads, n\+\_
 \item 
 def \mbox{\hyperlink{class_c_c_p___hannes_1_1_well__list_ae4a512caba0dd7137b6ad4196cf72c1d}{add\+Bead}} (self, i, bead, glyan\+\_\+name\+\_\+string, glycan\+\_\+type\+\_\+string, density\+\_\+percentage)
 \begin{DoxyCompactList}\small\item\em Method to add objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} to the bead list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_a5c1b28836c28ddea4d2cc808f4d1d266}\label{class_c_c_p___hannes_1_1_well__list_a5c1b28836c28ddea4d2cc808f4d1d266}} 
-def {\bfseries add\+Decoder\+Cell} (self, i, decoder\+Cell, lectin\+\_\+name\+\_\+string, lectin\+\_\+type\+\_\+string)
-\end{DoxyCompactItemize}
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_well__list_a761bc7b91f29dd64b96992fa33d24259}{add\+Decoder\+Cell}} (self, i, decoder\+Cell, lectin\+\_\+name\+\_\+string, density\+\_\+percentage)
+\begin{DoxyCompactList}\small\item\em Method to add objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} to the decoder\+Cell list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,6 +37,19 @@ def {\bfseries add\+Decoder\+Cell} (self, i, decoder\+Cell, lectin\+\_\+name\+\_
 
 \subsection{Detailed Description}
 Subclass of \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} using built-\/in python lists as containers for objects of the classes \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}. 
+
+{\ttfamily n\+\_\+beads} and {\ttfamily n\+\_\+cells} are not used by this class, but by the constructor of \mbox{\hyperlink{class_c_c_p___hannes_1_1_well__np_array}{Well\+\_\+np\+Array}}. It is necessary to have them here to allow convenient switching between Lists and Num\+Py Arrays.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x,y,z} & Size of the \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}}. \\
+\hline
+ & {\em n\+\_\+beads} & -- not used here -- \\
+\hline
+ & {\em n\+\_\+cells} & -- not used here -- \\
+\hline
+\end{DoxyParams}
+
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_ae4a512caba0dd7137b6ad4196cf72c1d}\label{class_c_c_p___hannes_1_1_well__list_ae4a512caba0dd7137b6ad4196cf72c1d}} 
@@ -58,7 +70,34 @@ Coordinates of the \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} are ra
 \hline
 \mbox{\tt in}  & {\em bead} & Object of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} to be added. \\
 \hline
-\mbox{\tt in}  & {\em } & \\
+\mbox{\tt in}  & {\em glycan\+\_\+name\+\_\+string} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\mbox{\tt in}  & {\em glycan\+\_\+type\+\_\+string} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\mbox{\tt in}  & {\em density\+\_\+percentage} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_well__list_a761bc7b91f29dd64b96992fa33d24259}\label{class_c_c_p___hannes_1_1_well__list_a761bc7b91f29dd64b96992fa33d24259}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Well\+\_\+list@{C\+C\+P\+\_\+\+Hannes\+::\+Well\+\_\+list}!add\+Decoder\+Cell@{add\+Decoder\+Cell}}
+\index{add\+Decoder\+Cell@{add\+Decoder\+Cell}!C\+C\+P\+\_\+\+Hannes\+::\+Well\+\_\+list@{C\+C\+P\+\_\+\+Hannes\+::\+Well\+\_\+list}}
+\subsubsection{\texorpdfstring{add\+Decoder\+Cell()}{addDecoderCell()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Well\+\_\+list.\+add\+Decoder\+Cell (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i,  }\item[{}]{decoder\+Cell,  }\item[{}]{lectin\+\_\+name\+\_\+string,  }\item[{}]{density\+\_\+percentage }\end{DoxyParamCaption})}
+
+
+
+Method to add objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} to the decoder\+Cell list. 
+
+Coordinates of the \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} are randomly chosen between 0 and size of the \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} in the respective dimension.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & Not used here, but neccessary for convenient switching between container types. \\
+\hline
+\mbox{\tt in}  & {\em decoder\+Cell} & Object of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} to be added. \\
+\hline
+\mbox{\tt in}  & {\em lectin\+\_\+name\+\_\+string} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_lectin}{Lectin}} \\
+\hline
+\mbox{\tt in}  & {\em density\+\_\+percentage} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_lectin}{Lectin}} \\
 \hline
 \end{DoxyParams}
 

@@ -1,20 +1,22 @@
 \hypertarget{class_c_c_p___hannes_1_1_builder}{}\section{C\+C\+P\+\_\+\+Hannes.\+Builder Class Reference}
 \label{class_c_c_p___hannes_1_1_builder}\index{C\+C\+P\+\_\+\+Hannes.\+Builder@{C\+C\+P\+\_\+\+Hannes.\+Builder}}
+
+
+\mbox{\hyperlink{class_c_c_p___hannes_1_1_builder}{Builder}} creates elements of the objects \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}}, \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}}, and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_c_c_p___hannes_1_1_builder_a4ac93ff13f014c884aac67f4f3114087}\label{class_c_c_p___hannes_1_1_builder_a4ac93ff13f014c884aac67f4f3114087}} 
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, x, y, z)
 \item 
-\mbox{\Hypertarget{class_c_c_p___hannes_1_1_builder_a0fec345dd5970ba6c4bf0ff698e967f8}\label{class_c_c_p___hannes_1_1_builder_a0fec345dd5970ba6c4bf0ff698e967f8}} 
-def {\bfseries build\+Well} (self, container\+\_\+type, n\+\_\+beads, n\+\_\+cells)
-\item 
-\mbox{\Hypertarget{class_c_c_p___hannes_1_1_builder_aecc5d7647ff893b666d0041008b496fd}\label{class_c_c_p___hannes_1_1_builder_aecc5d7647ff893b666d0041008b496fd}} 
-def {\bfseries build\+Bead} (self, i, ID, glyan\+\_\+name\+\_\+string, glycan\+\_\+type\+\_\+string, density\+\_\+percentage)
-\item 
-\mbox{\Hypertarget{class_c_c_p___hannes_1_1_builder_a27d07fcf53d3fa8a81b829bb4eea7cc7}\label{class_c_c_p___hannes_1_1_builder_a27d07fcf53d3fa8a81b829bb4eea7cc7}} 
-def {\bfseries build\+Decoder\+Cell} (self, i, ID, lectin\+\_\+name\+\_\+string, density\+\_\+percentage)
-\end{DoxyCompactItemize}
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder_a0fec345dd5970ba6c4bf0ff698e967f8}{build\+Well}} (self, container\+\_\+type, n\+\_\+beads, n\+\_\+cells)
+\begin{DoxyCompactList}\small\item\em Method to build instance of the type \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder_aecc5d7647ff893b666d0041008b496fd}{build\+Bead}} (self, i, ID, glyan\+\_\+name\+\_\+string, glycan\+\_\+type\+\_\+string, density\+\_\+percentage)
+\begin{DoxyCompactList}\small\item\em Method to build instance of the type \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder_a27d07fcf53d3fa8a81b829bb4eea7cc7}{build\+Decoder\+Cell}} (self, i, ID, lectin\+\_\+name\+\_\+string, density\+\_\+percentage)
+\begin{DoxyCompactList}\small\item\em Method to build instance of the type \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,6 +32,84 @@ def {\bfseries build\+Decoder\+Cell} (self, i, ID, lectin\+\_\+name\+\_\+string,
 \mbox{\Hypertarget{class_c_c_p___hannes_1_1_builder_ab0c32a1f39454bb20e1cedde5a3597f4}\label{class_c_c_p___hannes_1_1_builder_ab0c32a1f39454bb20e1cedde5a3597f4}} 
 {\bfseries well}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_c_c_p___hannes_1_1_builder}{Builder}} creates elements of the objects \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}}, \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}}, and \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}. 
+
+The director of the \mbox{\hyperlink{class_c_c_p___hannes_1_1_builder}{Builder}} is the class \mbox{\hyperlink{class_c_c_p___hannes_1_1_simulation}{Simulation}} (Creational Pattern).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x,y,z} & Dimensions of the \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} to be built. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_builder_aecc5d7647ff893b666d0041008b496fd}\label{class_c_c_p___hannes_1_1_builder_aecc5d7647ff893b666d0041008b496fd}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Builder@{C\+C\+P\+\_\+\+Hannes\+::\+Builder}!build\+Bead@{build\+Bead}}
+\index{build\+Bead@{build\+Bead}!C\+C\+P\+\_\+\+Hannes\+::\+Builder@{C\+C\+P\+\_\+\+Hannes\+::\+Builder}}
+\subsubsection{\texorpdfstring{build\+Bead()}{buildBead()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Builder.\+build\+Bead (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i,  }\item[{}]{ID,  }\item[{}]{glyan\+\_\+name\+\_\+string,  }\item[{}]{glycan\+\_\+type\+\_\+string,  }\item[{}]{density\+\_\+percentage }\end{DoxyParamCaption})}
+
+
+
+Method to build instance of the type \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & Position of respective \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} in Num\+Py Array. \\
+\hline
+\mbox{\tt in}  & {\em ID} & Identifier used by the constructor of \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}}. \\
+\hline
+\mbox{\tt in}  & {\em glycan\+\_\+name\+\_\+string} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\mbox{\tt in}  & {\em glycan\+\_\+type\+\_\+string} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\mbox{\tt in}  & {\em density\+\_\+percentage} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_glycan}{Glycan}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_builder_a27d07fcf53d3fa8a81b829bb4eea7cc7}\label{class_c_c_p___hannes_1_1_builder_a27d07fcf53d3fa8a81b829bb4eea7cc7}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Builder@{C\+C\+P\+\_\+\+Hannes\+::\+Builder}!build\+Decoder\+Cell@{build\+Decoder\+Cell}}
+\index{build\+Decoder\+Cell@{build\+Decoder\+Cell}!C\+C\+P\+\_\+\+Hannes\+::\+Builder@{C\+C\+P\+\_\+\+Hannes\+::\+Builder}}
+\subsubsection{\texorpdfstring{build\+Decoder\+Cell()}{buildDecoderCell()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Builder.\+build\+Decoder\+Cell (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{i,  }\item[{}]{ID,  }\item[{}]{lectin\+\_\+name\+\_\+string,  }\item[{}]{density\+\_\+percentage }\end{DoxyParamCaption})}
+
+
+
+Method to build instance of the type \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & Position of respective \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} in Num\+Py Array. \\
+\hline
+\mbox{\tt in}  & {\em ID} & Identifier used by the constructor of \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}}. \\
+\hline
+\mbox{\tt in}  & {\em lectin\+\_\+name\+\_\+string} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_lectin}{Lectin}} \\
+\hline
+\mbox{\tt in}  & {\em density\+\_\+percentage} & see documentation for class \mbox{\hyperlink{class_c_c_p___hannes_1_1_lectin}{Lectin}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_builder_a0fec345dd5970ba6c4bf0ff698e967f8}\label{class_c_c_p___hannes_1_1_builder_a0fec345dd5970ba6c4bf0ff698e967f8}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Builder@{C\+C\+P\+\_\+\+Hannes\+::\+Builder}!build\+Well@{build\+Well}}
+\index{build\+Well@{build\+Well}!C\+C\+P\+\_\+\+Hannes\+::\+Builder@{C\+C\+P\+\_\+\+Hannes\+::\+Builder}}
+\subsubsection{\texorpdfstring{build\+Well()}{buildWell()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Builder.\+build\+Well (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{container\+\_\+type,  }\item[{}]{n\+\_\+beads,  }\item[{}]{n\+\_\+cells }\end{DoxyParamCaption})}
+
+
+
+Method to build instance of the type \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em container\+\_\+type} & Specifies the type of container (list or Num\+Py Array). \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+beads} & Number of Beads, passed to the constructor of \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} subclass. \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+cells} & Number of Cells, passed to the constructor of \mbox{\hyperlink{class_c_c_p___hannes_1_1_well}{Well}} subclass. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

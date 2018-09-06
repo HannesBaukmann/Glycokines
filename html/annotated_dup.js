@@ -8,7 +8,7 @@ var annotated_dup =
       [ "DecoderCell", "class_c_c_p___hannes_1_1_decoder_cell.html", "class_c_c_p___hannes_1_1_decoder_cell" ],
       [ "Glycan", "class_c_c_p___hannes_1_1_glycan.html", "class_c_c_p___hannes_1_1_glycan" ],
       [ "Lectin", "class_c_c_p___hannes_1_1_lectin.html", "class_c_c_p___hannes_1_1_lectin" ],
-      [ "Simulation", "class_c_c_p___hannes_1_1_simulation.html", null ],
+      [ "Simulation", "class_c_c_p___hannes_1_1_simulation.html", "class_c_c_p___hannes_1_1_simulation" ],
       [ "Sphere", "class_c_c_p___hannes_1_1_sphere.html", "class_c_c_p___hannes_1_1_sphere" ],
       [ "Well", "class_c_c_p___hannes_1_1_well.html", "class_c_c_p___hannes_1_1_well" ],
       [ "Well_list", "class_c_c_p___hannes_1_1_well__list.html", "class_c_c_p___hannes_1_1_well__list" ],

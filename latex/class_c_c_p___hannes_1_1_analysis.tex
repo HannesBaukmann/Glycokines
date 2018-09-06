@@ -1,17 +1,22 @@
 \hypertarget{class_c_c_p___hannes_1_1_analysis}{}\section{C\+C\+P\+\_\+\+Hannes.\+Analysis Class Reference}
 \label{class_c_c_p___hannes_1_1_analysis}\index{C\+C\+P\+\_\+\+Hannes.\+Analysis@{C\+C\+P\+\_\+\+Hannes.\+Analysis}}
+
+
+This class contains three methods for the analysis of the results from the \mbox{\hyperlink{class_c_c_p___hannes_1_1_simulation}{Simulation}}.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_c_c_p___hannes_1_1_analysis_a05c37e0523e8c7de03b8b808d1db1ae0}\label{class_c_c_p___hannes_1_1_analysis_a05c37e0523e8c7de03b8b808d1db1ae0}} 
 def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, simulation\+Results, cytokine\+\_\+names=None)
 \item 
-\mbox{\Hypertarget{class_c_c_p___hannes_1_1_analysis_a914957b746c4d5d7b13daa2786cc4ae6}\label{class_c_c_p___hannes_1_1_analysis_a914957b746c4d5d7b13daa2786cc4ae6}} 
-def {\bfseries count\+Cytokines} (self)
-\item 
-\mbox{\Hypertarget{class_c_c_p___hannes_1_1_analysis_aa008afd3924050a0634ffdde72b3e9d9}\label{class_c_c_p___hannes_1_1_analysis_aa008afd3924050a0634ffdde72b3e9d9}} 
-def {\bfseries plot\+Cytokines} (self)
-\end{DoxyCompactItemize}
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_analysis_a914957b746c4d5d7b13daa2786cc4ae6}{count\+Cytokines}} (self)
+\begin{DoxyCompactList}\small\item\em Counts number of objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_cytokine}{Cytokine}} of respective type, i. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_analysis_aa008afd3924050a0634ffdde72b3e9d9}{plot\+Cytokines}} (self)
+\begin{DoxyCompactList}\small\item\em Creates a bar graph of the numbers of each type of cytokine. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{class_c_c_p___hannes_1_1_analysis_a4802fb98580b33a45025d96b64f21358}{plot\+Coordinates}} (self)
+\begin{DoxyCompactList}\small\item\em Creates a 3D scatter plot of the coordinates where a \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and a \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} met and produced a \mbox{\hyperlink{class_c_c_p___hannes_1_1_cytokine}{Cytokine}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,6 +29,60 @@ def {\bfseries plot\+Cytokines} (self)
 \mbox{\Hypertarget{class_c_c_p___hannes_1_1_analysis_a3f3659415fcff5636549a12bf7560930}\label{class_c_c_p___hannes_1_1_analysis_a3f3659415fcff5636549a12bf7560930}} 
 {\bfseries cytokine\+Amount}
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains three methods for the analysis of the results from the \mbox{\hyperlink{class_c_c_p___hannes_1_1_simulation}{Simulation}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em simulation\+Results} & The results of the simulation, i. e. the list containing the \mbox{\hyperlink{class_c_c_p___hannes_1_1_cytokine}{Cytokine}} object produced. \\
+\hline
+\mbox{\tt in}  & {\em cytokine\+\_\+names} & Names of the cytokines to be analyzed (optional) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_analysis_a914957b746c4d5d7b13daa2786cc4ae6}\label{class_c_c_p___hannes_1_1_analysis_a914957b746c4d5d7b13daa2786cc4ae6}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Analysis@{C\+C\+P\+\_\+\+Hannes\+::\+Analysis}!count\+Cytokines@{count\+Cytokines}}
+\index{count\+Cytokines@{count\+Cytokines}!C\+C\+P\+\_\+\+Hannes\+::\+Analysis@{C\+C\+P\+\_\+\+Hannes\+::\+Analysis}}
+\subsubsection{\texorpdfstring{count\+Cytokines()}{countCytokines()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Analysis.\+count\+Cytokines (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Counts number of objects of class \mbox{\hyperlink{class_c_c_p___hannes_1_1_cytokine}{Cytokine}} of respective type, i. 
+
+e. amount of cytokines produced.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em self.\+cytokine\+Names} & List with name of cytokines. \\
+\hline
+\mbox{\tt out}  & {\em self.\+cytokine\+Amount} & List with amount of respective cytokine. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_analysis_a4802fb98580b33a45025d96b64f21358}\label{class_c_c_p___hannes_1_1_analysis_a4802fb98580b33a45025d96b64f21358}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Analysis@{C\+C\+P\+\_\+\+Hannes\+::\+Analysis}!plot\+Coordinates@{plot\+Coordinates}}
+\index{plot\+Coordinates@{plot\+Coordinates}!C\+C\+P\+\_\+\+Hannes\+::\+Analysis@{C\+C\+P\+\_\+\+Hannes\+::\+Analysis}}
+\subsubsection{\texorpdfstring{plot\+Coordinates()}{plotCoordinates()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Analysis.\+plot\+Coordinates (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Creates a 3D scatter plot of the coordinates where a \mbox{\hyperlink{class_c_c_p___hannes_1_1_bead}{Bead}} and a \mbox{\hyperlink{class_c_c_p___hannes_1_1_decoder_cell}{Decoder\+Cell}} met and produced a \mbox{\hyperlink{class_c_c_p___hannes_1_1_cytokine}{Cytokine}}. 
+
+\mbox{\Hypertarget{class_c_c_p___hannes_1_1_analysis_aa008afd3924050a0634ffdde72b3e9d9}\label{class_c_c_p___hannes_1_1_analysis_aa008afd3924050a0634ffdde72b3e9d9}} 
+\index{C\+C\+P\+\_\+\+Hannes\+::\+Analysis@{C\+C\+P\+\_\+\+Hannes\+::\+Analysis}!plot\+Cytokines@{plot\+Cytokines}}
+\index{plot\+Cytokines@{plot\+Cytokines}!C\+C\+P\+\_\+\+Hannes\+::\+Analysis@{C\+C\+P\+\_\+\+Hannes\+::\+Analysis}}
+\subsubsection{\texorpdfstring{plot\+Cytokines()}{plotCytokines()}}
+{\footnotesize\ttfamily def C\+C\+P\+\_\+\+Hannes.\+Analysis.\+plot\+Cytokines (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Creates a bar graph of the numbers of each type of cytokine. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

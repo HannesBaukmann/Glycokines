@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "Cytokines", "namespace_cytokines.html", null ]
+    [ "Glycokines", "namespace_glycokines.html", null ]
 ];

@@ -95,10 +95,183 @@ $(document).ready(function(){initNavTree('class_c_c_p___hannes_1_1_simulation.ht
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="class_c_c_p___hannes_1_1_simulation-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CCP_Hannes.Simulation Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="class_c_c_p___hannes_1_1_simulation.html" title="Simulation contains methods to create the model by calling methods of call Builder, and to run simulations. ">Simulation</a> contains methods to create the model by calling methods of call <a class="el" href="class_c_c_p___hannes_1_1_builder.html" title="Builder creates elements of the objects Well, Bead, and DecoderCell. ">Builder</a>, and to run simulations.  
+ <a href="class_c_c_p___hannes_1_1_simulation.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:acce948d84267e7ebb00ac64022f5b4a1"><td class="memItemLeft" align="right" valign="top"><a id="acce948d84267e7ebb00ac64022f5b4a1"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, numberOfBeads, numberOfDecoderCells)</td></tr>
+<tr class="separator:acce948d84267e7ebb00ac64022f5b4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c38e62adf0444d0e97d068f2ee0daad"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_c_p___hannes_1_1_simulation.html#a9c38e62adf0444d0e97d068f2ee0daad">createModel</a> (self, builder, container_type, glycan_names_list, glycan_types_list, glycan_density, lectin_list, lectin_density)</td></tr>
+<tr class="memdesc:a9c38e62adf0444d0e97d068f2ee0daad"><td class="mdescLeft">&#160;</td><td class="mdescRight">At the beginning, it is ensured that the dictionary contains all entered glycan and lectin types.  <a href="#a9c38e62adf0444d0e97d068f2ee0daad">More...</a><br /></td></tr>
+<tr class="separator:a9c38e62adf0444d0e97d068f2ee0daad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa30032fef44f31161729fd781961893"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_c_p___hannes_1_1_simulation.html#afa30032fef44f31161729fd781961893">simulate</a> (self, well, steps)</td></tr>
+<tr class="memdesc:afa30032fef44f31161729fd781961893"><td class="mdescLeft">&#160;</td><td class="mdescRight">The simulation itself.  <a href="#afa30032fef44f31161729fd781961893">More...</a><br /></td></tr>
+<tr class="separator:afa30032fef44f31161729fd781961893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a24a7d1ddd0acbf6cc8686fc05b6068a9"><td class="memItemLeft" align="right" valign="top"><a id="a24a7d1ddd0acbf6cc8686fc05b6068a9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>n_beads</b></td></tr>
+<tr class="separator:a24a7d1ddd0acbf6cc8686fc05b6068a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42c095973fd5cff0689152f62a5096a1"><td class="memItemLeft" align="right" valign="top"><a id="a42c095973fd5cff0689152f62a5096a1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>n_decoder</b></td></tr>
+<tr class="separator:a42c095973fd5cff0689152f62a5096a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846800d73dd67261dc155832943b42c0"><td class="memItemLeft" align="right" valign="top"><a id="a846800d73dd67261dc155832943b42c0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>cytokines</b></td></tr>
+<tr class="separator:a846800d73dd67261dc155832943b42c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad856ba286b2470e8df0fa997b57ef461"><td class="memItemLeft" align="right" valign="top"><a id="ad856ba286b2470e8df0fa997b57ef461"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>cytokine_dict</b></td></tr>
+<tr class="separator:ad856ba286b2470e8df0fa997b57ef461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="class_c_c_p___hannes_1_1_simulation.html" title="Simulation contains methods to create the model by calling methods of call Builder, and to run simulations. ">Simulation</a> contains methods to create the model by calling methods of call <a class="el" href="class_c_c_p___hannes_1_1_builder.html" title="Builder creates elements of the objects Well, Bead, and DecoderCell. ">Builder</a>, and to run simulations. </p>
+<p>It contains the dictionary for binding specificity and cytokine expression.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">numberOfBeads</td><td>Number of objects of class <a class="el" href="class_c_c_p___hannes_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of acrylic glass) loaded with glycan structur...">Bead</a> to be created </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numberOfDecoderCells</td><td>Number of to be created </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">cytokines</td><td>List containing of objects of class <a class="el" href="class_c_c_p___hannes_1_1_cytokine.html" title="Objects of class Cytokine are produced if objects of the classes Bead and DecoderCell containing the ...">Cytokine</a> </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">cytokine_dict</td><td>Dictionary for binding specificity and cytokine expression </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9c38e62adf0444d0e97d068f2ee0daad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c38e62adf0444d0e97d068f2ee0daad">&#9670;&nbsp;</a></span>createModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CCP_Hannes.Simulation.createModel </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>container_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>glycan_names_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>glycan_types_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>glycan_density</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>lectin_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>lectin_density</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>At the beginning, it is ensured that the dictionary contains all entered glycan and lectin types. </p>
+<p>Then, the builder is directed to create one object of class <a class="el" href="class_c_c_p___hannes_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a> and instances of the classes <a class="el" href="class_c_c_p___hannes_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of acrylic glass) loaded with glycan structur...">Bead</a> and <a class="el" href="class_c_c_p___hannes_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells, i. ">DecoderCell</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">builder</td><td>Object of class <a class="el" href="class_c_c_p___hannes_1_1_builder.html" title="Builder creates elements of the objects Well, Bead, and DecoderCell. ">Builder</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">container_type</td><td>see documentation for class <a class="el" href="class_c_c_p___hannes_1_1_builder.html" title="Builder creates elements of the objects Well, Bead, and DecoderCell. ">Builder</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">glycan_names_list</td><td>see documentation for class <a class="el" href="class_c_c_p___hannes_1_1_glycan.html" title="Objects of the class Glycan are attached to objects of the class Bead. ">Glycan</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">glycan_types_list</td><td>see documentation for class <a class="el" href="class_c_c_p___hannes_1_1_glycan.html" title="Objects of the class Glycan are attached to objects of the class Bead. ">Glycan</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">glycan_density</td><td>see documentation for class <a class="el" href="class_c_c_p___hannes_1_1_glycan.html" title="Objects of the class Glycan are attached to objects of the class Bead. ">Glycan</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lectin_list</td><td>see documentation for class <a class="el" href="class_c_c_p___hannes_1_1_lectin.html" title="Objects of the class Lectin are attached to objects of the class DecoderCell. ">Lectin</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lectin_density</td><td>see documentation for class <a class="el" href="class_c_c_p___hannes_1_1_lectin.html" title="Objects of the class Lectin are attached to objects of the class DecoderCell. ">Lectin</a> </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">builder.well</td><td>Object of class <a class="el" href="class_c_c_p___hannes_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a> created by <a class="el" href="class_c_c_p___hannes_1_1_builder.html" title="Builder creates elements of the objects Well, Bead, and DecoderCell. ">Builder</a>, containing objects of classes <a class="el" href="class_c_c_p___hannes_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of acrylic glass) loaded with glycan structur...">Bead</a> and <a class="el" href="class_c_c_p___hannes_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells, i. ">DecoderCell</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa30032fef44f31161729fd781961893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa30032fef44f31161729fd781961893">&#9670;&nbsp;</a></span>simulate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CCP_Hannes.Simulation.simulate </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>well</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>steps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The simulation itself. </p>
+<p>First, all Beads and all DecoderCells move once. Then, for every <a class="el" href="class_c_c_p___hannes_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of acrylic glass) loaded with glycan structur...">Bead</a> it is tested if there's a <a class="el" href="class_c_c_p___hannes_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells, i. ">DecoderCell</a> at the same position (Beads can be bound by different Cells successively). If this is true and the mutiplied densities exceed a random number, the cytokine dictionary is inquired. If the <a class="el" href="class_c_c_p___hannes_1_1_lectin.html" title="Objects of the class Lectin are attached to objects of the class DecoderCell. ">Lectin</a> on the <a class="el" href="class_c_c_p___hannes_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells, i. ">DecoderCell</a> and the <a class="el" href="class_c_c_p___hannes_1_1_glycan.html" title="Objects of the class Glycan are attached to objects of the class Bead. ">Glycan</a> on the <a class="el" href="class_c_c_p___hannes_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of acrylic glass) loaded with glycan structur...">Bead</a> match, the a object of the class <a class="el" href="class_c_c_p___hannes_1_1_cytokine.html" title="Objects of class Cytokine are produced if objects of the classes Bead and DecoderCell containing the ...">Cytokine</a> of the respective type is produced and stored in the self.cytokines list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">well</td><td>Object of class <a class="el" href="class_c_c_p___hannes_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a> produced by method createModel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">steps</td><td>Number of steps </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cytokines</td><td>List containing objects of type <a class="el" href="class_c_c_p___hannes_1_1_cytokine.html" title="Objects of class Cytokine are produced if objects of the classes Bead and DecoderCell containing the ...">Cytokine</a> and the coordinates of production </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>CCP_Hannes.py</li>
 </ul>

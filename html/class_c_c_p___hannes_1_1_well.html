@@ -112,7 +112,7 @@ Inheritance diagram for CCP_Hannes.Well:</div>
   <img src="class_c_c_p___hannes_1_1_well.png" usemap="#CCP_5FHannes.Well_map" alt=""/>
   <map id="CCP_5FHannes.Well_map" name="CCP_5FHannes.Well_map">
 <area href="class_c_c_p___hannes_1_1_well__list.html" title="Subclass of Well using built-in python lists as containers for objects of the classes Bead and Decode..." alt="CCP_Hannes.Well_list" shape="rect" coords="0,56,170,80"/>
-<area href="class_c_c_p___hannes_1_1_well__np_array.html" alt="CCP_Hannes.Well_npArray" shape="rect" coords="180,56,350,80"/>
+<area href="class_c_c_p___hannes_1_1_well__np_array.html" title="Subclass of Well using NumPy Arrays as containers for objects of the classes Bead and DecoderCell..." alt="CCP_Hannes.Well_npArray" shape="rect" coords="180,56,350,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -122,12 +122,12 @@ Public Member Functions</h2></td></tr>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, x, y, z)</td></tr>
 <tr class="separator:a3149734033aad29ad56cca89fd2b8580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae595041538a36438fa0ff796a1e24d4c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_c_p___hannes_1_1_well.html#ae595041538a36438fa0ff796a1e24d4c">borderControl</a> (self, coordinates, dx, dy, dz)</td></tr>
-<tr class="memdesc:ae595041538a36438fa0ff796a1e24d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method borderControl ensures that objects' coordinates don't exceed the well's size.  <a href="#ae595041538a36438fa0ff796a1e24d4c">More...</a><br /></td></tr>
+<tr class="memdesc:ae595041538a36438fa0ff796a1e24d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method borderControl ensures that objects' coordinates don't exceed the <a class="el" href="class_c_c_p___hannes_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a>'s size.  <a href="#ae595041538a36438fa0ff796a1e24d4c">More...</a><br /></td></tr>
 <tr class="separator:ae595041538a36438fa0ff796a1e24d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The class <a class="el" href="class_c_c_p___hannes_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a> describes the sample, in which binding events take place. </p>
-<p>It serves a a superclass for two subclasses of which one uses NumPy Arrays as a container for onjects of the classes <a class="el" href="class_c_c_p___hannes_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of acrylic glass) loaded with glycan structur...">Bead</a> and <a class="el" href="class_c_c_p___hannes_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells (such as THP-1 cells) that express Le...">DecoderCell</a> while the other one uses built-in Python lists for this purpose.</p>
+<p>It serves a a superclass for two subclasses of which one uses NumPy Arrays as a container for objects of the classes <a class="el" href="class_c_c_p___hannes_1_1_bead.html" title="Bead is a subclass of Sphere and represents beads (made of acrylic glass) loaded with glycan structur...">Bead</a> and <a class="el" href="class_c_c_p___hannes_1_1_decoder_cell.html" title="DecoderCell is a subclass of Sphere and represents immune cells, i. ">DecoderCell</a> while the other one uses built-in Python lists for this purpose.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">x,y,z</td><td>Size of the well. </td></tr>
@@ -179,13 +179,14 @@ def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b> (self, x,
       </table>
 </div><div class="memdoc">
 
-<p>The method borderControl ensures that objects' coordinates don't exceed the well's size. </p>
-<p>If a step in randomWalk would lead to a forbidden value, the respective step value will be set to 0 and the object won't move this turn as if repelled from the well's borders.</p>
+<p>The method borderControl ensures that objects' coordinates don't exceed the <a class="el" href="class_c_c_p___hannes_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a>'s size. </p>
+<p>If a step in <code>randomWalk</code> would lead to a forbidden value, the sign of the respective step value will be reversed so the object "bounces
+ back" from the <a class="el" href="class_c_c_p___hannes_1_1_well.html" title="The class Well describes the sample, in which binding events take place. ">Well</a>'s borders.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">coordinates</td><td>The object's coordinates before the move. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dx,dy,dz</td><td>The randomly chosen next steps. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">dx,dy,dz</td><td>The revised next steps </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dx,dy,dz</td><td>The revised next steps. </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,21 +1,5 @@
-\form#0:$\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
-\form#1:$ \sqrt{(x_2-x_1)^2+(y_2-y_1)^2} $
-\form#2:$ 25 \mu l = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m = 420 pt $
-\form#3:$ x^2 = \frac{k_B \cdot T}{3r \pi \eta} t = 4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot t $
-\form#4:$ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m $
-\form#5:$^2$
-\form#6:$x=y=0.06 cm^2=600 pt$
-\form#7:\[ 25 \mu l = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m = 420 pt \]
-\form#8:\[ x^2 = \frac{k_B \cdot T}{3r \pi \eta} t = 4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot t \]
-\form#9:$_H$
-\form#10:\[ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m \]
-\form#11:\[ 25 \mu l = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m = 420 pt. \]
-\form#12:\[ x^2 = \frac{k_B \cdot T}{3r \pi \eta} t = \frac{1.381 \cdot 10^{-23} J/K \cdot 298 K}{3 \cdot 5 \mu m \cdot \pi \cdot 0.891 mPa \cdot s} = 9.8 \cdot 10^{-13} \frac{m^2}{s} \cdot t \]
-\form#13:\[ h = \frac{25 \mu l}{b} = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m = 420 pt. \]
-\form#14:\[ x^2 = \frac{k_B \cdot T}{6r \pi \eta} t = \frac{1.381 \cdot 10^{-23} J/K \cdot 298 K}{6 \cdot 5 \mu m \cdot \pi \cdot 0.891 mPa \cdot s} = 9.8 \cdot 10^{-13} \frac{m^2}{s} \cdot t \]
-\form#15:\[ \sqrt{x^2} = \sqrt{4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot 1s} = 7 \cdot 10^{-7} m^2.\]
-\form#16:\[ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m = 126 steps. \]
-\form#17:\[ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m = 126\mbox{steps}. \]
-\form#18:$ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m = 126\mbox{ steps}. $
-\form#19:\[ \sqrt{x^2} = \sqrt{4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot 1s} = 7 \cdot 10^{-7} m.\]
-\form#20:$x=y=0.06 cm=600 pt$
+\form#0:$x=y=0.06 cm=600 pt$
+\form#1:\[ h = \frac{25 \mu l}{b} = \frac{25 \cdot 10^{-8} m^3}{0.36 cm^2} = 41.67 \cdot 10^{-4} m = 420 pt. \]
+\form#2:\[ x^2 = \frac{k_B \cdot T}{6r \pi \eta} t = \frac{1.381 \cdot 10^{-23} J/K \cdot 298 K}{6 \cdot 5 \mu m \cdot \pi \cdot 0.891 mPa \cdot s} = 9.8 \cdot 10^{-13} \frac{m^2}{s} \cdot t \]
+\form#3:\[ \sqrt{x^2} = \sqrt{4.9 \cdot 10^{-13} \frac{m^2}{s} \cdot 1s} = 7 \cdot 10^{-7} m.\]
+\form#4:$ 1800 s \cdot 0.7 \mu m/s = 1260 \mu m = 126\mbox{ steps}. $

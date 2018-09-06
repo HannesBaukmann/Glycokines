@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cytokines',['Cytokines',['../namespace_cytokines.html',1,'']]]
+  ['glycokines',['Glycokines',['../namespace_glycokines.html',1,'']]]
 ];
